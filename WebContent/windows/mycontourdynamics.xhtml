@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+	<h:body>
+	<h:form>
+		<p:panelMenu style="width:100%">
+			<p:submenu label="Support">
+				<p:menuitem value="Customers" onclick="PF('dialogCustomer').show()"/>
+				<p:menuitem value="Consumers" onclick="PF('dialogNewFromDesign2').show()" />
+				<p:menuitem value="WorkQueues" actionListener="#{buttonBean.update}" />
+			</p:submenu>
+			<p:submenu label="Sales">
+				<p:menuitem value="Orders" actionListener="#{buttonBean.delete}"/>
+				<p:menuitem value="Contracts" actionListener="#{buttonBean.delete}"/>
+			</p:submenu>
+			<p:submenu label="Product Catalogs" >
+				<p:menuitem value="Campaigns" icon="ui-icon-extlink" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="Assets" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="Services" actionListener="#{buttonBean.update}" />
+			</p:submenu>
+			<p:submenu label="Smart BSS" >
+				<p:menuitem value="Packages" icon="ui-icon-extlink" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="Rate Chart" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="Vendors" actionListener="#{buttonBean.update}" />
+				<p:menuitem value="Workflows" actionListener="#{buttonBean.update}" />
+			</p:submenu>
+			<p:submenu label="BI Reports" >
+				<p:menuitem value="Reports" icon="ui-icon-extlink" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="Stationaries" actionListener="#{buttonBean.update}"/>
+			</p:submenu>
+			<p:submenu label="Administration" >
+				<p:menuitem value="Document Templates" icon="ui-icon-extlink" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="Setups" actionListener="#{buttonBean.update}"/>
+			</p:submenu>
+			<p:submenu label="Services" >
+				<p:menuitem value="IP-PBX" icon="ui-icon-extlink" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="File Manager" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="BLF Panel" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="Communication portal" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="eFax" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="Logs" actionListener="#{buttonBean.update}"/>
+			</p:submenu>
+			<p:submenu label="Directory" >
+				<p:menuitem value="Phone Book" icon="ui-icon-extlink" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="Groups" actionListener="#{buttonBean.update}"/>
+				<p:menuitem value="External Accouns" actionListener="#{buttonBean.update}"/>
+			</p:submenu>
+		</p:panelMenu>    
+      </h:form>
+    </h:body>
+</html>

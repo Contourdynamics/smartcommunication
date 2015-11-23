@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+	<h:body>
+	<h:form>
+	<p:dialog heigth="100%" width="100%" responsive="false" style="font-size: small" draggable="false" resizable="false" position="0,0" header="Customers" modal="false" positionType="absolute" fitViewport="false" appendToBody="true" id="dialogCustomer" widgetVar="dialogCustomer">
+    <p:panel rendered="#{identity.loggedIn}" autoupdate="true">
+            <h:panelGrid columns="2">
+                <h:graphicImage value="../img/seamlogo.png" alt="Seam logo"/>
+                    <p><strong>Your seam-gen project is deployed!</strong> Here are some of the features this project provides:</p>
+                    <ul class="bullets">
+                        <li>Ant build script</li>
+                        <li>Deployment to JBoss AS (EAR or WAR)</li>
+                        <li>Development and production profiles</li>
+                        <li>Integration testing using TestNG and Embedded JBoss</li>
+                        <li>JavaBean or EJB 3.0 Seam components</li>
+                        <li>JPA entity classes</li>
+                        <li>A configurable DataSource and JPA EntityManager</li>
+                        <li>Templated Facelets views</li>
+                        <li>RichFaces panels and tables</li>
+                        <li>Default CSS stylesheet</li>
+                        <li>Internationalization support</li>
+                    </ul>
+            </h:panelGrid>
+            
+        </p:panel>
+    </p:dialog>
+   </h:form>
+  </h:body>
+  
+  </html> 

@@ -1,0 +1,185 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.contourdynamics.voip.framework</groupId>
+  <artifactId>contourdynamics</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>contourdynamics</name>
+  <properties>
+  <version.org.apache.deltaspike>1.5.0</version.org.apache.deltaspike>
+  <!-- PicketLink dependency versions -->
+    <version.picketlink>2.7.0.Final</version.picketlink>
+  </properties>
+  <build>
+    <sourceDirectory>${basedir}/src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>${basedir}/src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.3</version>
+        <configuration>
+          <warSourceDirectory>${basedir}/WebContent</warSourceDirectory>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.0</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+    <dependencies>
+  <dependency>
+	<groupId>javax</groupId>
+	<artifactId>javaee-api</artifactId>
+	<version>6.0</version>
+</dependency>
+	<dependency>
+		<groupId>org.picketlink</groupId>
+		<artifactId>picketlink-api</artifactId>
+		<version>${version.picketlink}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.picketlink</groupId>
+		<artifactId>picketlink-impl</artifactId>
+		<version>${version.picketlink}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.picketlink</groupId>
+		<artifactId>picketlink-idm-api</artifactId>
+		<version>${version.picketlink}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.picketlink</groupId>
+		<artifactId>picketlink-idm-impl</artifactId>
+		<version>${version.picketlink}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.picketlink</groupId>
+		<artifactId>picketlink-deltaspike</artifactId>
+		<version>${version.picketlink}</version>
+	</dependency>
+	<dependency>
+      <groupId>org.picketlink</groupId>
+      <artifactId>picketlink-idm-simple-schema</artifactId>
+      <version>${version.picketlink}</version>
+      <scope>compile</scope>
+    </dependency>
+     <!-- DeltaSpike modules -->
+
+            <dependency>
+                <groupId>org.apache.deltaspike.core</groupId>
+                <artifactId>deltaspike-core-api</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.core</groupId>
+                <artifactId>deltaspike-core-impl</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-bean-validation-module-api</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-bean-validation-module-impl</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-data-module-api</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-data-module-impl</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-jpa-module-api</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-jpa-module-impl</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-jsf-module-api</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-jsf-module-impl-ee6</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-security-module-api</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-security-module-impl</artifactId>
+                <version>${version.org.apache.deltaspike}</version>
+                <scope>runtime</scope>
+            </dependency>
+                    <dependency>
+            <groupId>org.apache.deltaspike.modules</groupId>
+            <artifactId>deltaspike-servlet-module-api</artifactId>
+            <version>${version.org.apache.deltaspike}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.deltaspike.modules</groupId>
+            <artifactId>deltaspike-servlet-module-impl</artifactId>
+            <version>${version.org.apache.deltaspike}</version>
+        </dependency>
+       
+
+                    <!-- Primefaces Version 5 -->
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>5.3</version>
+        </dependency>
+  </dependencies>
+</project>

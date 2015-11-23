@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:p="http://primefaces.org/ui">
+   <h:head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <title>CMS</title>
+      <style>
+      .ui-panelgrid>*>tr,
+	  .ui-panelgrid .ui-panelgrid-cell {
+			border: none !important;
+	  }
+      </style>
+   </h:head>
+   <h:body>
+    <ui:composition autoupdate="true" template="layout/template.xhtml" rendered="#{identity.loggedIn}">
+<ui:define id="body" name="body" autoupdate="true">
+
+        <ui:include src="/dialogs/Test.xhtml" ajax="true"/>
+        <ui:include src="/dialogs/customers.xhtml" ajax="true"/>
+  
+</ui:define>
+
+<ui:define id="Login" name="Login" rendered="#{not identity.loggedIn}" autoupdate="true">
+        
+        <h:form id="loginForm">
+        <p:panel rendered="#{not identity.loggedIn}" autoupdate="true">
+            <f:facet name="header">Login</f:facet>
+            <p>Please login here</p>
+            <p:messages autoUpdate="true" showDetail="true" closable="true" severity="error" />
+            <div class="dialog">
+            <p:panelGrid columns="2" style="border:0px;" >
+            <p:column>
+                <p:panelGrid columns="3" >
+                    <p:outputLabel for="username">Username</p:outputLabel>
+                    <p:inputText id="username" value="#{loginCredentials.userId}"/>
+                    <p:messages autoUpdate="true" closable="true" for="username" />
+                
+                    <p:outputLabel for="password">Password</p:outputLabel>
+                	<p:password id="password" value="#{loginCredentials.password}"/>
+                    <p:messages autoUpdate="true" closable="true" for="password" />
+                </p:panelGrid>
+            </p:column>
+            </p:panelGrid>
+            </div>
+			<div class="actionButtons" style="margin-top: 10px">
+            	<p:commandButton id="submit" value="Login" action="#{identity.login}" ajax="false">
+            	</p:commandButton>
+        	</div>
+        </p:panel>
+     </h:form>
+</ui:define>
+</ui:composition>
+</h:body>
+</h:html>

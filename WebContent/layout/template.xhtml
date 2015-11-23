@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:p="http://primefaces.org/ui">
+   <h:head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <title>CMS</title>
+      <style>
+      .ui-panelgrid>*>tr,
+	  .ui-panelgrid .ui-panelgrid-cell {
+			border: none !important;
+	  }
+      </style>
+   </h:head>
+   <h:body>
+<p:layout fullPage="true"  rendered="#{identity.loggedIn}">
+		<p:layoutUnit position="center">
+			<div class="body">
+        		<ui:insert name="body"/>
+     		 </div>
+		</p:layoutUnit>
+		<p:layoutUnit position="north" rendered="#{identity.loggedIn}" header="ContourDynamics- VoIP Framework CMS" size="75" style="font-size: small" >
+
+		</p:layoutUnit>
+		<p:layoutUnit position="west" rendered="#{identity.loggedIn}" header="My ContourDynamics" style="font-size: small" size="190" resizable="true"  collapsible="true">
+			<ui:include src="../windows/mycontourdynamics.xhtml">
+        				<ui:param name="projectName" value="CMS"/>
+     		</ui:include>
+		</p:layoutUnit>
+		<p:layoutUnit position="east" rendered="#{identity.loggedIn}" size="160" collapsed="true" style="font-size: small" header="Right Panel"  collapsible="true">
+			<h:outputText value="Right Content" />
+		</p:layoutUnit>
+		
+	</p:layout>
+<ui:insert name="Login" rendered="#{not identity.loggedIn}"/>
+   </h:body>
+</h:html>
