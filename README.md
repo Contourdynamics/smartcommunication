@@ -1,2 +1,2 @@
-# smartcommunication
+# smart communication
 Smart Communication solution for VoIP based BSS/OSS and Services.
