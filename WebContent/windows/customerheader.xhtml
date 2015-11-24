@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      <h:head>
+      <style>
+.ui-layout-unit {
+   	padding: 2px !important;
+}
+.ui-layout-unit .ui-layout-unit-content {
+   	padding: 2px !important;
+}
+.ui-layout-north {
+ 	font-size: 12px;
+       z-index:20 !important;
+       overflow:visible !important;
+       border:0 none !important;
+}
+
+.ui-layout-north .ui-layout-unit-content {
+       overflow:visible !important;
+       font-size: 10px !important;
+       border:0 none !important;
+}
+      .ui-ribbon{
+      	border:0 none !important; 
+      }
+      .ui-tabs .ui-tabs-nav{
+      background: none !important;
+      border:0 none !important; 
+      }
+      </style>
+      </h:head>
+	<h:body>
+		<h:form>
+			<p:ribbon>
+				<p:tab title="Customers">
+					<p:ribbonGroup label="Options">
+						<p:commandButton value="New" icon="ui-ribbonicon-new" styleClass="ui-ribbon-bigbutton" type="button"/>
+						<p:commandButton value="Save" icon="ui-ribbonicon-save" styleClass="ui-ribbon-bigbutton" type="button"/>
+					</p:ribbonGroup>
+					<p:ribbonGroup label="Clipboard" style="width:150px">
+						<p:selectManyButton>
+							<p:commandButton value="Paste" icon="ui-ribbonicon-paste" styleClass="ui-ribbon-bigbutton" type="button"/>
+							<p:commandButton value="Cut" icon="ui-ribbonicon-cut" style="width:64px" type="button"/>
+							<p:commandButton value="Print" icon="ui-ribbonicon-print" style="width:64px" type="button"/>
+						</p:selectManyButton>
+					</p:ribbonGroup>
+					<p:ribbonGroup label="Fonts" style="width:220px">
+						<p:selectOneMenu appendTo="@this">
+							<f:selectItem itemLabel="Arial" itemValue="0" />
+							<f:selectItem itemLabel="Comis Sans" itemValue="1" />
+							<f:selectItem itemLabel="Helvetica" itemValue="2" />
+							<f:selectItem itemLabel="Times New Roman" itemValue="3" />
+							<f:selectItem itemLabel="Verdana" itemValue="4" />
+						</p:selectOneMenu>
+						<p:colorPicker />
+					</p:ribbonGroup>
+				</p:tab>
+				<p:tab title="View">
+					<p:ribbonGroup label="Zoom">
+						<p:commandButton value="In" icon="ui-ribbonicon-zoomin" styleClass="ui-ribbon-bigbutton" type="button" />
+						<p:commandButton value="Out" icon="ui-ribbonicon-zoomout" styleClass="ui-ribbon-bigbutton" type="button"/>
+					</p:ribbonGroup>
+				</p:tab>
+			</p:ribbon>
+		</h:form>
+	</h:body>
+</html>
