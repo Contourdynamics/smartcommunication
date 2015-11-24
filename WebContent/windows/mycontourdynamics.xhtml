@@ -9,15 +9,15 @@
 	<h:form>
 		<p:panelMenu style="width:100%">
 			<p:submenu label="Support">
-				<p:menuitem value="Customers" onclick="PF('dialogCustomer').show()"/>
-				<p:menuitem value="Consumers" onclick="PF('dialogNewFromDesign2').show()" />
+				<p:menuitem value="Customers" onclick="PF('dialogCustomer').hide();PF('dialogCustomer').show();"/>
+				<p:menuitem value="Consumers" onclick="PF('dialogNewFromDesign2').hide();PF('dialogNewFromDesign2').show();" />
 				<p:menuitem value="WorkQueues" actionListener="#{buttonBean.update}" />
 			</p:submenu>
 			<p:submenu label="Sales">
 				<p:menuitem value="Orders" actionListener="#{buttonBean.delete}"/>
 				<p:menuitem value="Contracts" actionListener="#{buttonBean.delete}"/>
 			</p:submenu>
-			<p:submenu label="Product Catalogs" >
+			<p:submenu label="Inventory" >
 				<p:menuitem value="Campaigns" icon="ui-icon-extlink" actionListener="#{buttonBean.update}"/>
 				<p:menuitem value="Assets" actionListener="#{buttonBean.update}"/>
 				<p:menuitem value="Services" actionListener="#{buttonBean.update}" />

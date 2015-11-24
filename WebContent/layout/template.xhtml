@@ -23,15 +23,15 @@
         		<ui:insert name="body"/>
      		 </div>
 		</p:layoutUnit>
-		<p:layoutUnit position="north" rendered="#{identity.loggedIn}" header="ContourDynamics- VoIP Framework CMS" size="75" style="font-size: small" >
+		<p:layoutUnit effect="drop" position="north" rendered="#{identity.loggedIn}" header="ContourDynamics- VoIP Framework CMS" size="75" style="font-size: small" >
 
 		</p:layoutUnit>
-		<p:layoutUnit position="west" rendered="#{identity.loggedIn}" header="My ContourDynamics" style="font-size: small" size="190" resizable="true"  collapsible="true">
+		<p:layoutUnit effect="drop" position="west" rendered="#{identity.loggedIn}" header="My Navigation" style="font-size: small" size="150" resizable="false"  collapsible="true">
 			<ui:include src="../windows/mycontourdynamics.xhtml">
         				<ui:param name="projectName" value="CMS"/>
      		</ui:include>
 		</p:layoutUnit>
-		<p:layoutUnit position="east" rendered="#{identity.loggedIn}" size="160" collapsed="true" style="font-size: small" header="Right Panel"  collapsible="true">
+		<p:layoutUnit effect="drop" position="east" rendered="#{identity.loggedIn}" size="160" collapsed="true" style="font-size: small" header="Right Panel"  collapsible="true">
 			<h:outputText value="Right Content" />
 		</p:layoutUnit>
 		
