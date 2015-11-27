@@ -16,6 +16,8 @@
  */
 package org.contourdynamics.cms.producers;
 
+import java.util.List;
+
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
 import org.picketlink.idm.IdentityManager;
 import org.picketlink.idm.PartitionManager;
@@ -24,7 +26,10 @@ import org.picketlink.idm.credential.Password;
 import org.picketlink.idm.model.basic.Group;
 import org.picketlink.idm.model.basic.Role;
 import org.picketlink.idm.model.basic.User;
+import org.picketlink.idm.query.IdentityQuery;
+import org.picketlink.idm.query.IdentityQueryBuilder;
 import org.picketlink.annotations.PicketLink;
+
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
@@ -51,21 +56,49 @@ public class SecurityInitializer {
 
     @PostConstruct
     public void create() {
+//Validate if already created default values.
+        IdentityManager identityManager = this.partitionManager.createIdentityManager();
+        
+        IdentityQueryBuilder queryBuilder = identityManager.getQueryBuilder();
+        IdentityQuery<User> query = queryBuilder.createIdentityQuery(User.class);
+        
+        query.where(queryBuilder.equal(User.FIRST_NAME, "admin"));
 
-        // Create user john
+        List<User> users = query.getResultList();
+        
+        if( users.size() == 1)
+        {
+        	return;
+        }
+// create default values.
+     // Create user john
         User admin = new User("admin");
         admin.setEmail("admin@contourdynamics.com");
         admin.setFirstName("admin");
         admin.setLastName("Super");
-
-        IdentityManager identityManager = this.partitionManager.createIdentityManager();
-
+        
         identityManager.add(admin);
         identityManager.updateCredential(admin, new Password("admin"));
 
         // Create application role "superuser"
         Role Admin = new Role("Admin");
         identityManager.add(Admin);
+        
+     // Create application role "Customer"
+        Role customer = new Role("Customer");
+        identityManager.add(customer);
+        
+     // Create application role "Consumer"
+        Role Consumer = new Role("Consumer");
+        identityManager.add(Consumer);
+        
+     // Create application role "Vendor"
+        Role Vendor = new Role("Vendor");
+        identityManager.add(Vendor);
+        
+     // Create application role "Contacts"
+        Role contacts = new Role("Contacts");
+        identityManager.add(contacts);
         
         // there will be only 1 role for the default profile which will be admin
         // for wholesaler retailer and consumer it will create and manager the partition
