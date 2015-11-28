@@ -7,7 +7,17 @@
       xmlns:p="http://primefaces.org/ui">
 	<h:body>
 		<h:form>
-	
+	<p:dataTable id="basicDT" var="customer" value="#{CustomerListManager.ReadAllCustomers()}">
+        <f:facet name="header">
+            Basic
+        </f:facet>
+        <p:column headerText="Id">
+            <h:outputText value="#{customer.id}" />
+        </p:column>
+        <p:column headerText="descriptions">
+            <h:outputText value="#{customer.description}" />
+        </p:column>
+    </p:dataTable>
 	
 		</h:form>
 	</h:body>

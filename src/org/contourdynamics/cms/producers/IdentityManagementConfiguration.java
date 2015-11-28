@@ -56,6 +56,7 @@ import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
 
 import org.picketlink.internal.EntityManagerContextInitializer;
 import org.picketlink.idm.config.IdentityConfiguration;
@@ -72,14 +73,6 @@ import org.picketlink.idm.model.Relationship;
 public class IdentityManagementConfiguration {
 
 	private IdentityConfiguration identityConfig = null;
-	
-//	@Inject
- //   private PartitionManager partitionManager;
-	
-	@Produces
-	@PicketLink
-	@PersistenceContext
-	private EntityManager picketLinkEntityManager;
 	
 	@Produces
 	public IdentityConfiguration createConfig() {
@@ -120,17 +113,7 @@ public class IdentityManagementConfiguration {
                 PasswordCredentialTypeEntity.class,
                 RelationshipTypeEntity.class,
                 RelationshipIdentityTypeEntity.class)
-                .addContextInitializer(new ContextInitializer() {
-                            @Override
-                            public void initContextForStore(IdentityContext context, IdentityStore<?> store) {
-                                if (store instanceof JPAIdentityStore) {
-                                    if (!context.isParameterSet(JPAIdentityStore.INVOCATION_CTX_ENTITY_MANAGER)) {
-                                        context.setParameter(JPAIdentityStore.INVOCATION_CTX_ENTITY_MANAGER, picketLinkEntityManager);
-                                    }
-                                }
-                            }
-                        });
+                ;
 		identityConfig = builder.build();
-	//	partitionManager = new DefaultPartitionManager(builder.buildAll());
 	}
 }
