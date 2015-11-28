@@ -11,6 +11,9 @@ public interface  CDMessages {
 	 @MessageTemplate("Please Enter Username")
 	 String UsernameRequired();
 	 
-	 @MessageTemplate("Password or Username not Valid!")
+	 @MessageTemplate("Password or Username or Domain not Valid!")
 	 String LoginStatusFailure();
+	 
+	 @MessageTemplate("Please Enter Domain")
+	 String DomainRequired();
 }

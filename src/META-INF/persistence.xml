@@ -3,23 +3,28 @@
 	<persistence-unit name="contourdynamic" transaction-type="JTA">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<jta-data-source>java:jboss/datasources/contourdynamics</jta-data-source>
-	  <class>org.picketlink.idm.jpa.model.sample.simple.AttributedTypeEntity</class>
-      <class>org.picketlink.idm.jpa.model.sample.simple.AccountTypeEntity</class>
-      <class>org.picketlink.idm.jpa.model.sample.simple.RoleTypeEntity</class>
-      <class>org.picketlink.idm.jpa.model.sample.simple.GroupTypeEntity</class>
-      <class>org.picketlink.idm.jpa.model.sample.simple.IdentityTypeEntity</class>
-      <class>org.picketlink.idm.jpa.model.sample.simple.RelationshipTypeEntity</class>
-      <class>org.picketlink.idm.jpa.model.sample.simple.RelationshipIdentityTypeEntity</class>
-      <class>org.picketlink.idm.jpa.model.sample.simple.PartitionTypeEntity</class>
-      <class>org.picketlink.idm.jpa.model.sample.simple.PasswordCredentialTypeEntity</class>
-      <class>org.picketlink.idm.jpa.model.sample.simple.AttributeTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.ApplicationAccessTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.ApplicationTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.ApplicationRealmTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.GrantTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.GroupMembershipTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.GroupTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.RealmTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.RoleTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.UserTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.PasswordCredentialTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.PartitionTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.AbstractIdentityTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.RelationshipTypeEntity</class>
+        <class>org.contourdynamics.cms.idm.entity.RelationshipIdentityTypeEntity</class>
+        
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+			<property name="hibernate.connection.tinyInt1isBit" value="false"/>
+			
 			<property name="hibernate.hbm2ddl.auto" value="validate"/>
 			<property name="hibernate.max_fetch_depth" value="3"/>
-			<property name="hibernate.connection.tinyInt1isBit" value="true"/>
-			<property name="hibernate.connection.transformedBitIsBoolean" value="true"/>
 			<property name="hibernate.show_sql" value="false"/>
 			<property name="hibernate.id.new_generator_mappings" value="false"/>
 			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform"/>

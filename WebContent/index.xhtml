@@ -35,6 +35,10 @@
             <p:panelGrid columns="2" style="border:0px;" >
             <p:column>
                 <p:panelGrid columns="3" >
+					<p:outputLabel for="Realm">Domain Name</p:outputLabel>
+                    <p:inputText id="Realm" value="#{IdentityManager.realm}"/>
+                    <p:messages autoUpdate="true" closable="true" for="Realm" />
+
                     <p:outputLabel for="username">Username</p:outputLabel>
                     <p:inputText id="username" value="#{loginCredentials.userId}"/>
                     <p:messages autoUpdate="true" closable="true" for="username" />

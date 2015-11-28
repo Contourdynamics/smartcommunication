@@ -16,16 +16,19 @@
  */
 package org.contourdynamics.cms.producers;
 
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
 import java.util.List;
 
 import org.apache.deltaspike.jpa.api.transaction.Transactional;
+import org.contourdynamics.cms.idm.model.Realm;
 import org.picketlink.idm.IdentityManager;
 import org.picketlink.idm.PartitionManager;
 import org.picketlink.idm.RelationshipManager;
 import org.picketlink.idm.credential.Password;
-import org.picketlink.idm.model.basic.Group;
-import org.picketlink.idm.model.basic.Role;
-import org.picketlink.idm.model.basic.User;
+import org.contourdynamics.cms.idm.model.Group;
+import org.contourdynamics.cms.idm.model.Role;
+import org.contourdynamics.cms.idm.model.User;
 import org.picketlink.idm.query.IdentityQuery;
 import org.picketlink.idm.query.IdentityQueryBuilder;
 import org.picketlink.annotations.PicketLink;
@@ -39,7 +42,7 @@ import javax.inject.Inject;
 import static org.picketlink.idm.model.basic.BasicModel.addToGroup;
 import static org.picketlink.idm.model.basic.BasicModel.grantGroupRole;
 import static org.picketlink.idm.model.basic.BasicModel.grantRole;
-
+import java.security.NoSuchAlgorithmException;
 /**
  * This startup bean creates a number of default users, groups and roles when the application is started.
  * 
@@ -51,62 +54,44 @@ import static org.picketlink.idm.model.basic.BasicModel.grantRole;
 @Transactional(qualifier = PicketLink.class)
 public class SecurityInitializer {
 
+	protected static final String REALM_CD_NAME = "contourdynamics";
+    protected static final String APPLICATION_SALES_NAME = "smartcommunication";
+    
     @Inject
     private PartitionManager partitionManager;
 
     @PostConstruct
-    public void create() {
-//Validate if already created default values.
-        IdentityManager identityManager = this.partitionManager.createIdentityManager();
-        
-        IdentityQueryBuilder queryBuilder = identityManager.getQueryBuilder();
-        IdentityQuery<User> query = queryBuilder.createIdentityQuery(User.class);
-        
-        query.where(queryBuilder.equal(User.FIRST_NAME, "admin"));
-
-        List<User> users = query.getResultList();
-        
-        if( users.size() == 1)
-        {
-        	return;
-        }
-// create default values.
-     // Create user john
-        User admin = new User("admin");
-        admin.setEmail("admin@contourdynamics.com");
-        admin.setFirstName("admin");
-        admin.setLastName("Super");
-        
-        identityManager.add(admin);
-        identityManager.updateCredential(admin, new Password("admin"));
-
-        // Create application role "superuser"
-        Role Admin = new Role("Admin");
-        identityManager.add(Admin);
-        
-     // Create application role "Customer"
-        Role customer = new Role("Customer");
-        identityManager.add(customer);
-        
-     // Create application role "Consumer"
-        Role Consumer = new Role("Consumer");
-        identityManager.add(Consumer);
-        
-     // Create application role "Vendor"
-        Role Vendor = new Role("Vendor");
-        identityManager.add(Vendor);
-        
-     // Create application role "Contacts"
-        Role contacts = new Role("Contacts");
-        identityManager.add(contacts);
-        
-        // there will be only 1 role for the default profile which will be admin
-        // for wholesaler retailer and consumer it will create and manager the partition
-        // every partition will own its own roles/groups/users
-        
-        RelationshipManager relationshipManager = this.partitionManager.createRelationshipManager();
-
-        // Grant the "Admin" application role to admin
-        grantRole(relationshipManager, admin, Admin);
+    public void create() throws Exception{
+    	Realm cd = new Realm(REALM_CD_NAME);
+    	Realm storedRealm = partitionManager.getPartition(Realm.class, cd.getName());
+    	if(storedRealm == null)
+    	{
+    		cd.setEnforceSSL(true);
+    		// let's generate a keypair for the realm
+    		KeyPair keyPair = KeyPairGenerator.getInstance("RSA").generateKeyPair();
+    		cd.setPrivateKey(keyPair.getPrivate().getEncoded());
+    		cd.setPublickKey(keyPair.getPublic().getEncoded());
+    		cd.setNumberFailedLoginAttempts(3);
+    		partitionManager.add(cd);
+ 
+        	IdentityManager cdIdentityManager = partitionManager.createIdentityManager(cd);
+        	
+            Role Administrator = new Role("Administrator");
+            Role Customer = new Role("Customer");
+            Role Consumer = new Role("Consumer");
+            Role Vendor = new Role("Vendor");
+            Role Contacts = new Role("Contacts");
+            
+            cdIdentityManager.add(Administrator);
+            cdIdentityManager.add(Customer);
+            cdIdentityManager.add(Consumer);
+            cdIdentityManager.add(Vendor);
+            cdIdentityManager.add(Contacts);
+            
+            User user = new User("admin");            
+            cdIdentityManager.add(user);
+            Password password = new Password("admin");
+            cdIdentityManager.updateCredential(user, password); 
+    	}
     }
 }
