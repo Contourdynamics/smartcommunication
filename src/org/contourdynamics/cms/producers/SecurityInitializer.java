@@ -29,6 +29,8 @@ import org.picketlink.idm.credential.Password;
 import org.contourdynamics.cms.idm.model.Group;
 import org.contourdynamics.cms.idm.model.Role;
 import org.contourdynamics.cms.idm.model.User;
+import org.picketlink.idm.model.IdentityType;
+import org.contourdynamics.cms.idm.model.Grant;
 import org.picketlink.idm.query.IdentityQuery;
 import org.picketlink.idm.query.IdentityQueryBuilder;
 import org.picketlink.annotations.PicketLink;
@@ -42,6 +44,7 @@ import javax.inject.Inject;
 import static org.picketlink.idm.model.basic.BasicModel.addToGroup;
 import static org.picketlink.idm.model.basic.BasicModel.grantGroupRole;
 import static org.picketlink.idm.model.basic.BasicModel.grantRole;
+
 import java.security.NoSuchAlgorithmException;
 /**
  * This startup bean creates a number of default users, groups and roles when the application is started.
@@ -92,6 +95,10 @@ public class SecurityInitializer {
             cdIdentityManager.add(user);
             Password password = new Password("admin");
             cdIdentityManager.updateCredential(user, password); 
+            
+            RelationshipManager relationshipManager = partitionManager.createRelationshipManager();
+         // Grant the "Admin" application role to admin
+            relationshipManager.add(new Grant(user, Administrator));
     	}
     }
 }

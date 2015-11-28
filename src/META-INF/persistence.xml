@@ -7,7 +7,6 @@
         <class>org.contourdynamics.cms.idm.entity.ApplicationTypeEntity</class>
         <class>org.contourdynamics.cms.idm.entity.ApplicationRealmTypeEntity</class>
         <class>org.contourdynamics.cms.idm.entity.GrantTypeEntity</class>
-        <class>org.contourdynamics.cms.idm.entity.GroupMembershipTypeEntity</class>
         <class>org.contourdynamics.cms.idm.entity.GroupTypeEntity</class>
         <class>org.contourdynamics.cms.idm.entity.RealmTypeEntity</class>
         <class>org.contourdynamics.cms.idm.entity.RoleTypeEntity</class>
