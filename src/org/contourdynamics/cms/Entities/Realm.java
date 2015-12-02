@@ -1,12 +1,18 @@
 package org.contourdynamics.cms.Entities;
 
-// Generated Nov 28, 2015 11:11:51 PM by Hibernate Tools 3.4.0.CR1
+// Generated Dec 2, 2015 6:46:44 AM by Hibernate Tools 3.4.0.CR1
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -17,17 +23,20 @@ import javax.persistence.Table;
 public class Realm implements java.io.Serializable {
 
 	private Integer id;
+	private StatusCode statusCode;
 	private String description;
-	private Integer statusCode;
 	private String domain;
+	private Set<BpSysUser> bpSysUsers = new HashSet<BpSysUser>(0);
 
 	public Realm() {
 	}
 
-	public Realm(String description, Integer statusCode, String domain) {
-		this.description = description;
+	public Realm(StatusCode statusCode, String description, String domain,
+			Set<BpSysUser> bpSysUsers) {
 		this.statusCode = statusCode;
+		this.description = description;
 		this.domain = domain;
+		this.bpSysUsers = bpSysUsers;
 	}
 
 	@Id
@@ -41,6 +50,16 @@ public class Realm implements java.io.Serializable {
 		this.id = id;
 	}
 
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "StatusCode")
+	public StatusCode getStatusCode() {
+		return this.statusCode;
+	}
+
+	public void setStatusCode(StatusCode statusCode) {
+		this.statusCode = statusCode;
+	}
+
 	@Column(name = "description", length = 45)
 	public String getDescription() {
 		return this.description;
@@ -50,15 +69,6 @@ public class Realm implements java.io.Serializable {
 		this.description = description;
 	}
 
-	@Column(name = "status_code")
-	public Integer getStatusCode() {
-		return this.statusCode;
-	}
-
-	public void setStatusCode(Integer statusCode) {
-		this.statusCode = statusCode;
-	}
-
 	@Column(name = "domain", length = 45)
 	public String getDomain() {
 		return this.domain;
@@ -66,6 +76,15 @@ public class Realm implements java.io.Serializable {
 
 	public void setDomain(String domain) {
 		this.domain = domain;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "realm")
+	public Set<BpSysUser> getBpSysUsers() {
+		return this.bpSysUsers;
+	}
+
+	public void setBpSysUsers(Set<BpSysUser> bpSysUsers) {
+		this.bpSysUsers = bpSysUsers;
 	}
 
 }

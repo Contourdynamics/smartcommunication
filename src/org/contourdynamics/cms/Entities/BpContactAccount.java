@@ -1,6 +1,6 @@
 package org.contourdynamics.cms.Entities;
 
-// Generated Nov 28, 2015 11:11:51 PM by Hibernate Tools 3.4.0.CR1
+// Generated Dec 2, 2015 6:46:44 AM by Hibernate Tools 3.4.0.CR1
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

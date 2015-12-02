@@ -58,6 +58,7 @@ import java.security.NoSuchAlgorithmException;
 public class SecurityInitializer {
 
 	protected static final String REALM_CD_NAME = "contourdynamics";
+	protected static final String REALM_CDCustomer_NAME = "contourdynamicscustomer";
     protected static final String APPLICATION_SALES_NAME = "smartcommunication";
     
     @Inject
@@ -70,7 +71,6 @@ public class SecurityInitializer {
     	if(storedRealm == null)
     	{
     		cd.setEnforceSSL(true);
-    		// let's generate a keypair for the realm
     		KeyPair keyPair = KeyPairGenerator.getInstance("RSA").generateKeyPair();
     		cd.setPrivateKey(keyPair.getPrivate().getEncoded());
     		cd.setPublickKey(keyPair.getPublic().getEncoded());
@@ -97,8 +97,35 @@ public class SecurityInitializer {
             cdIdentityManager.updateCredential(user, password); 
             
             RelationshipManager relationshipManager = partitionManager.createRelationshipManager();
-         // Grant the "Admin" application role to admin
             relationshipManager.add(new Grant(user, Administrator));
+            
+            
+            Realm cdcustomer = new Realm(REALM_CDCustomer_NAME);
+        	Realm customerRealm = partitionManager.getPartition(Realm.class, cdcustomer.getName());
+        	
+        	if(customerRealm == null)
+        	{
+        		cdcustomer.setEnforceSSL(true);
+        		KeyPair keyPaircustomer = KeyPairGenerator.getInstance("RSA").generateKeyPair();
+        		cdcustomer.setPrivateKey(keyPaircustomer.getPrivate().getEncoded());
+        		cdcustomer.setPublickKey(keyPaircustomer.getPublic().getEncoded());
+        		cdcustomer.setNumberFailedLoginAttempts(3);
+        		partitionManager.add(cdcustomer);
+     
+            	IdentityManager cdIdentityManagercst = partitionManager.createIdentityManager(cdcustomer);
+            	
+            	User customer = new User("customer");            
+            	cdIdentityManagercst.add(customer);
+                Password demo = new Password("demo");
+                cdIdentityManagercst.updateCredential(customer, demo); 
+                relationshipManager.add(new Grant(customer, Customer));
+                
+                
+                User consumer = new User("consumer");            
+            	cdIdentityManagercst.add(consumer);
+                cdIdentityManagercst.updateCredential(consumer, demo); 
+                relationshipManager.add(new Grant(consumer, Consumer));
+        	}
     	}
     }
 }

@@ -1,7 +1,9 @@
 package org.contourdynamics.cms.Entities;
 
-// Generated Nov 28, 2015 11:11:51 PM by Hibernate Tools 3.4.0.CR1
+// Generated Dec 2, 2015 6:46:44 AM by Hibernate Tools 3.4.0.CR1
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +12,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -20,17 +23,20 @@ import javax.persistence.Table;
 public class BpSysUser implements java.io.Serializable {
 
 	private Integer id;
-	private BpMain bpMain;
-	private Integer realm;
+	private Realm realm;
+	private StatusCode statusCode;
 	private String user;
+	private Set<BpMain> bpMains = new HashSet<BpMain>(0);
 
 	public BpSysUser() {
 	}
 
-	public BpSysUser(BpMain bpMain, Integer realm, String user) {
-		this.bpMain = bpMain;
+	public BpSysUser(Realm realm, StatusCode statusCode, String user,
+			Set<BpMain> bpMains) {
 		this.realm = realm;
+		this.statusCode = statusCode;
 		this.user = user;
+		this.bpMains = bpMains;
 	}
 
 	@Id
@@ -45,22 +51,23 @@ public class BpSysUser implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "BP_MAIN")
-	public BpMain getBpMain() {
-		return this.bpMain;
-	}
-
-	public void setBpMain(BpMain bpMain) {
-		this.bpMain = bpMain;
-	}
-
-	@Column(name = "Realm")
-	public Integer getRealm() {
+	@JoinColumn(name = "Realm")
+	public Realm getRealm() {
 		return this.realm;
 	}
 
-	public void setRealm(Integer realm) {
+	public void setRealm(Realm realm) {
 		this.realm = realm;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "StatusCode")
+	public StatusCode getStatusCode() {
+		return this.statusCode;
+	}
+
+	public void setStatusCode(StatusCode statusCode) {
+		this.statusCode = statusCode;
 	}
 
 	@Column(name = "user")
@@ -70,6 +77,15 @@ public class BpSysUser implements java.io.Serializable {
 
 	public void setUser(String user) {
 		this.user = user;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "bpSysUser")
+	public Set<BpMain> getBpMains() {
+		return this.bpMains;
+	}
+
+	public void setBpMains(Set<BpMain> bpMains) {
+		this.bpMains = bpMains;
 	}
 
 }

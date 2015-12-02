@@ -1,6 +1,6 @@
 package org.contourdynamics.cms.Entities;
 
-// Generated Nov 28, 2015 11:11:51 PM by Hibernate Tools 3.4.0.CR1
+// Generated Dec 2, 2015 6:46:44 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,10 +23,10 @@ import javax.persistence.Table;
 public class BpMain implements java.io.Serializable {
 
 	private Integer id;
+	private BpSysUser bpSysUser;
+	private BpTypeCode bpTypeCode;
 	private StatusCode statusCode;
 	private String description;
-	private Integer type;
-	private Set<BpSysUser> bpSysUsers = new HashSet<BpSysUser>(0);
 	private Set<BpIndv> bpIndvs = new HashSet<BpIndv>(0);
 	private Set<BpRoles> bpRoleses = new HashSet<BpRoles>(0);
 	private Set<BpCmpy> bpCmpies = new HashSet<BpCmpy>(0);
@@ -34,13 +34,13 @@ public class BpMain implements java.io.Serializable {
 	public BpMain() {
 	}
 
-	public BpMain(StatusCode statusCode, String description, Integer type,
-			Set<BpSysUser> bpSysUsers, Set<BpIndv> bpIndvs,
+	public BpMain(BpSysUser bpSysUser, BpTypeCode bpTypeCode,
+			StatusCode statusCode, String description, Set<BpIndv> bpIndvs,
 			Set<BpRoles> bpRoleses, Set<BpCmpy> bpCmpies) {
+		this.bpSysUser = bpSysUser;
+		this.bpTypeCode = bpTypeCode;
 		this.statusCode = statusCode;
 		this.description = description;
-		this.type = type;
-		this.bpSysUsers = bpSysUsers;
 		this.bpIndvs = bpIndvs;
 		this.bpRoleses = bpRoleses;
 		this.bpCmpies = bpCmpies;
@@ -58,7 +58,27 @@ public class BpMain implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "status")
+	@JoinColumn(name = "BP_SYS_User")
+	public BpSysUser getBpSysUser() {
+		return this.bpSysUser;
+	}
+
+	public void setBpSysUser(BpSysUser bpSysUser) {
+		this.bpSysUser = bpSysUser;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "type")
+	public BpTypeCode getBpTypeCode() {
+		return this.bpTypeCode;
+	}
+
+	public void setBpTypeCode(BpTypeCode bpTypeCode) {
+		this.bpTypeCode = bpTypeCode;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "StatusCode")
 	public StatusCode getStatusCode() {
 		return this.statusCode;
 	}
@@ -74,24 +94,6 @@ public class BpMain implements java.io.Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	@Column(name = "type")
-	public Integer getType() {
-		return this.type;
-	}
-
-	public void setType(Integer type) {
-		this.type = type;
-	}
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "bpMain")
-	public Set<BpSysUser> getBpSysUsers() {
-		return this.bpSysUsers;
-	}
-
-	public void setBpSysUsers(Set<BpSysUser> bpSysUsers) {
-		this.bpSysUsers = bpSysUsers;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "bpMain")

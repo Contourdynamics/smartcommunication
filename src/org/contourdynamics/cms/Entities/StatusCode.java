@@ -1,6 +1,6 @@
 package org.contourdynamics.cms.Entities;
 
-// Generated Nov 28, 2015 11:11:51 PM by Hibernate Tools 3.4.0.CR1
+// Generated Dec 2, 2015 6:46:44 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,16 +26,21 @@ public class StatusCode implements java.io.Serializable {
 	private Set<BpContactAccount> bpContactAccounts = new HashSet<BpContactAccount>(
 			0);
 	private Set<BpMain> bpMains = new HashSet<BpMain>(0);
+	private Set<Realm> realms = new HashSet<Realm>(0);
+	private Set<BpSysUser> bpSysUsers = new HashSet<BpSysUser>(0);
 
 	public StatusCode() {
 	}
 
 	public StatusCode(String description, Set<BpRoles> bpRoleses,
-			Set<BpContactAccount> bpContactAccounts, Set<BpMain> bpMains) {
+			Set<BpContactAccount> bpContactAccounts, Set<BpMain> bpMains,
+			Set<Realm> realms, Set<BpSysUser> bpSysUsers) {
 		this.description = description;
 		this.bpRoleses = bpRoleses;
 		this.bpContactAccounts = bpContactAccounts;
 		this.bpMains = bpMains;
+		this.realms = realms;
+		this.bpSysUsers = bpSysUsers;
 	}
 
 	@Id
@@ -83,6 +88,24 @@ public class StatusCode implements java.io.Serializable {
 
 	public void setBpMains(Set<BpMain> bpMains) {
 		this.bpMains = bpMains;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "statusCode")
+	public Set<Realm> getRealms() {
+		return this.realms;
+	}
+
+	public void setRealms(Set<Realm> realms) {
+		this.realms = realms;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "statusCode")
+	public Set<BpSysUser> getBpSysUsers() {
+		return this.bpSysUsers;
+	}
+
+	public void setBpSysUsers(Set<BpSysUser> bpSysUsers) {
+		this.bpSysUsers = bpSysUsers;
 	}
 
 }

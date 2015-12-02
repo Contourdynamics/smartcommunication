@@ -1,6 +1,6 @@
 package org.contourdynamics.cms.Entities;
 
-// Generated Nov 28, 2015 11:11:51 PM by Hibernate Tools 3.4.0.CR1
+// Generated Dec 2, 2015 6:46:44 AM by Hibernate Tools 3.4.0.CR1
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,17 +20,17 @@ import javax.persistence.Table;
 public class BpRoles implements java.io.Serializable {
 
 	private Integer id;
-	private StatusCode statusCode;
+	private RoleCode roleCode;
 	private BpMain bpMain;
-	private String role;
+	private StatusCode statusCode;
 
 	public BpRoles() {
 	}
 
-	public BpRoles(StatusCode statusCode, BpMain bpMain, String role) {
-		this.statusCode = statusCode;
+	public BpRoles(RoleCode roleCode, BpMain bpMain, StatusCode statusCode) {
+		this.roleCode = roleCode;
 		this.bpMain = bpMain;
-		this.role = role;
+		this.statusCode = statusCode;
 	}
 
 	@Id
@@ -45,13 +45,13 @@ public class BpRoles implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "Status")
-	public StatusCode getStatusCode() {
-		return this.statusCode;
+	@JoinColumn(name = "Role")
+	public RoleCode getRoleCode() {
+		return this.roleCode;
 	}
 
-	public void setStatusCode(StatusCode statusCode) {
-		this.statusCode = statusCode;
+	public void setRoleCode(RoleCode roleCode) {
+		this.roleCode = roleCode;
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -64,13 +64,14 @@ public class BpRoles implements java.io.Serializable {
 		this.bpMain = bpMain;
 	}
 
-	@Column(name = "Role")
-	public String getRole() {
-		return this.role;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "StatusCode")
+	public StatusCode getStatusCode() {
+		return this.statusCode;
 	}
 
-	public void setRole(String role) {
-		this.role = role;
+	public void setStatusCode(StatusCode statusCode) {
+		this.statusCode = statusCode;
 	}
 
 }
