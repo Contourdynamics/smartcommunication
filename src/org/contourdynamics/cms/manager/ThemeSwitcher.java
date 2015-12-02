@@ -51,12 +51,10 @@ public class ThemeSwitcher {
         advancedThemes.add(new Theme("black-tie", "black-tie.png"));
         advancedThemes.add(new Theme("blitzer", "blitzer.png"));
         advancedThemes.add(new Theme("bluesky", "bluesky.png"));
-        advancedThemes.add(new Theme("bootstrap", "bootstrap.png"));
         advancedThemes.add(new Theme("casablanca", "casablanca.png"));
         advancedThemes.add(new Theme("cruze", "cruze.png"));
         advancedThemes.add(new Theme("cupertino", "cupertino.png"));
         advancedThemes.add(new Theme("dark-hive", "dark-hive.png"));
-        advancedThemes.add(new Theme("delta", "delta.png"));
         advancedThemes.add(new Theme("dot-luv", "dot-luv.png"));
         advancedThemes.add(new Theme("eggplant", "eggplant.png"));
         advancedThemes.add(new Theme("excite-bike", "excite-bike.png"));

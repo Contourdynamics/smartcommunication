@@ -26,10 +26,7 @@
         		<ui:include src="/windows/customerlist.xhtml" ajax="true" />
     		</p:layoutUnit>
 		    <p:layoutUnit position="center">
-    		    <p:themeSwitcher id="basic" style="width:165px">
-            		<f:selectItem itemLabel="Choose Theme" itemValue="" />
-            		<f:selectItems value="#{ThemeSwitcherManager.themes}"/>
-        		</p:themeSwitcher>
+				Customer Form
     		</p:layoutUnit>
     		<p:layoutUnit effect="slide" position="east" rendered="#{identity.loggedIn}" size="160" collapsed="true" style="font-size: small" header="Right Panel"  collapsible="true">
 				<h:outputText value="Right Content" />

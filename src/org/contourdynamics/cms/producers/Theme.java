@@ -1,5 +1,10 @@
 package org.contourdynamics.cms.producers;
 import java.io.Serializable;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+@Named("Theme")
+@RequestScoped
 public class Theme implements Serializable {
 	  
     private String name;

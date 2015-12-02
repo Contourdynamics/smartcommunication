@@ -123,9 +123,16 @@
  
     <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close" />
 </p:megaMenu>
-<p:themeSwitcher id="basic2" style="width:165px">
+<p:themeSwitcher id="basic2" style="width:165px" effect="fade" var="t">
             		<f:selectItem itemLabel="Choose Theme" itemValue="" />
-            		<f:selectItems value="#{ThemeSwitcherManager.themes}"/>
+            		<f:selectItems value="#{ThemeSwitcherManager.advancedThemes}" var="theme"
+itemLabel="#{theme.name}" itemValue="#{theme}"/>
+            		<p:column>
+<p:graphicImage value="resources/images/themes/#{t.image}"/>
+</p:column>
+<p:column>
+#{t.name}
+</p:column>
         		</p:themeSwitcher>
 
 </p:panelGrid>
