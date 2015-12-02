@@ -7,9 +7,9 @@
       xmlns:p="http://primefaces.org/ui">
 	<h:body>
 	<h:form>
-<p:panelGrid columns="2" style="width: 100%">
+<p:panelGrid columns="3" style="width: 100%">
 	<h:graphicImage value="resources/images/logo.png" alt="Contourdynamics-Web Framework"/>
-<p:megaMenu orientation="horizontal">
+<p:megaMenu orientation="horizontal" align="right" style="border:none;margin:-15px;position:absolute;right: 15px;width: 400px;">
     <p:submenu label="TV" icon="ui-icon-check">
         <p:column>
             <p:submenu label="TV.1">
@@ -123,7 +123,13 @@
  
     <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close" />
 </p:megaMenu>
+<p:themeSwitcher id="basic2" style="width:165px">
+            		<f:selectItem itemLabel="Choose Theme" itemValue="" />
+            		<f:selectItems value="#{ThemeSwitcherManager.themes}"/>
+        		</p:themeSwitcher>
+
 </p:panelGrid>
+
 
 </h:form></h:body>
 </html>
