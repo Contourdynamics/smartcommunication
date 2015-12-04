@@ -5,14 +5,59 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
+      <h:head>
+      <style>
+      .ui-selectonemenu-panel .ui-selectonemenu-list-item
+      {
+      	font-size: small !important;
+      }
+	 .ui-selectcheckboxmenu-items-wrapper
+	 {
+	 	font-size: small !important;
+	 }
+      </style>
+      
+      </h:head>
 	<h:body>
 		<h:form>
-	<p:dataTable id="basicDT" var="customer" value="#{CustomerListManager.ReadAllCustomers()}">
-        <p:column headerText="Id">
-            <h:outputText value="#{customer.id}" />
-        </p:column>
-        <p:column headerText="descriptions">
+	<p:dataTable widgetVar="CustomerTable" id="basicDT" 
+	filteredValue="#{CustomerListManager.filteredCustomers}" draggableColumns="true" rowHover="true" 
+	 scrollable="true" scrollHeight="100%" resizableColumns="true" paginator="true" rows="10" var="customer" 
+	 sortBy="#{customer.description}" value="#{CustomerListManager.ReadAllCustomers()}"
+	 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+  	 rowsPerPageTemplate="5,10,15" paginatorPosition="bottom"
+     selection="#{CustomerListManager.selectedCustomers}" rowKey="#{customer.id}">
+        <f:facet name="header">
+            <p:outputPanel>
+                <h:outputText value="Search Customers:" />
+                <p:inputText id="globalFilter" onkeyup="PF('CustomerTable').filter()" style="width:100%" placeholder="Enter keyword"/>
+            </p:outputPanel>
+        </f:facet>
+        
+        <p:column selectionMode="Multiple" style="width: 20px;"/>
+        <p:column headerText="descriptions" filterBy="#{customer.description}" filterMatchMode="exact" style="width: 102px;">
+        	
             <h:outputText value="#{customer.description}" />
+        </p:column>
+        <p:column headerText="Domain" filterBy="#{customer.bpSysUser.realm.domain}">
+            <h:outputText value="#{customer.bpSysUser.realm.domain}" />
+        </p:column>
+        <p:column headerText="Type" filterBy="#{customer.bpTypeCode.description}" style="width: 92px;">
+        	<f:facet name="filter">
+                <p:selectOneMenu onchange="PF('CustomerTable').filter()" >
+                    <f:selectItem itemLabel="Select One" itemValue="#{null}" noSelectionOption="true" />
+                    <f:selectItems value="#{CustomerListManager.typeCode}" />
+                </p:selectOneMenu>
+            </f:facet>
+            <h:outputText value="#{customer.bpTypeCode.description}" />
+        </p:column>
+        <p:column headerText="Status" filterBy="#{customer.statusCode.description}" filterMatchMode="in" style="width: 65px;">
+        <f:facet name="filter">
+                <p:selectCheckboxMenu label="Status" onchange="PF('CustomerTable').filter()" panelStyle="width:125px" scrollHeight="150">
+                    <f:selectItems value="#{CustomerListManager.statusCode}" />
+                </p:selectCheckboxMenu>
+            </f:facet>
+            <h:outputText value="#{customer.statusCode.description}" />
         </p:column>
     </p:dataTable>
 	
