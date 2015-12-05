@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+	<h:body>
+		<h:form prependId="false">
+    <p:accordionPanel id="CustomerViewDialog" widgetVar="CustomerViewDialog" multiple="true" activeIndex="0">
+       <p:tab title="Customer Details" disabled="true">
+            <h:panelGrid columns="2" cellpadding="10">
+           		 <p:outputLabel for="Descriptions">Description:</p:outputLabel>
+                 <p:inputText id="Descriptions" readonly="true" value="#{CustomerListManager.selectedCustomers.get(0).description}"/>
+                
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Godfather Part II">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="demo/images/godfather/godfather2.jpg" />
+                <h:outputText value="Francis Ford Coppola's legendary..." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Godfather Part III">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="demo/images/godfather/godfather3.jpg" />
+                <h:outputText value="After a break of more than 15 years..." />
+            </h:panelGrid>
+        </p:tab>
+    </p:accordionPanel>
+		</h:form>
+	</h:body>
+</html>
