@@ -17,14 +17,11 @@
    </h:head>
    <h:body>
     <ui:composition autoupdate="true" template="layout/template.xhtml" rendered="#{identity.loggedIn}">
-<ui:define id="body" name="body" autoupdate="true">
+		<ui:define id="body" name="body" autoupdate="true">
+        	<ui:include src="/dialogs/customers.xhtml" ajax="true"/>
+		</ui:define>
 
-        <ui:include src="/dialogs/Test.xhtml" ajax="true"/>
-        <ui:include src="/dialogs/customers.xhtml" ajax="true"/>
-  
-</ui:define>
-
-<ui:define id="Login" name="Login" rendered="#{not identity.loggedIn}" autoupdate="true">
+		<ui:define id="Login" name="Login" rendered="#{not identity.loggedIn}" autoupdate="true">
         
         <h:form id="loginForm">
         <p:panel rendered="#{not identity.loggedIn}" autoupdate="true">

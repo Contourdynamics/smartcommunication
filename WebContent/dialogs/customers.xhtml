@@ -16,17 +16,21 @@
       </style>
       </h:head>
 	<h:body>
-	<h:form>
-	<p:dialog heigth="100%" width="99.5%" responsive="false" style="font-size: small" draggable="false" resizable="false" position="0,0" header="Customers" modal="false" positionType="absolute" fitViewport="false" appendToBody="true" id="dialogCustomer" widgetVar="dialogCustomer">
-		<p:layout style="height:92%">
+	<h:form prependId="false">
+	<p:dialog heigth="100%" width="99.5%" responsive="false" style="font-size: small" 
+	draggable="false" resizable="false" position="0,0" header="Customers" modal="false" 
+	positionType="absolute" fitViewport="false" appendToBody="true" id="dialogCustomer" 
+	widgetVar="dialogCustomer">
+	<p:ajax event="close" listener="#{CustomerListManager.handleClose}" />
+		<p:layout style="height:92%" id="alllayout">
 			<p:layoutUnit position="north" size="115" >
-        		<ui:include src="/windows/customerheader.xhtml" ajax="true" />
+        		<ui:include src="/windows/customerheader.xhtml" />
     		</p:layoutUnit>
  		   <p:layoutUnit position="west" resizable="true" size="600">
-        		<ui:include src="/windows/customerlist.xhtml" ajax="true" />
+        		<ui:include src="/windows/customerlist.xhtml"/>
     		</p:layoutUnit>
 		    <p:layoutUnit position="center">
-				Customer Form
+				<ui:include src="/windows/CustomerView.xhtml"/>
     		</p:layoutUnit>
     		<p:layoutUnit effect="slide" position="east" rendered="#{identity.loggedIn}" size="160" collapsed="true" style="font-size: small" header="Right Panel"  collapsible="true">
 				<h:outputText value="Right Content" />

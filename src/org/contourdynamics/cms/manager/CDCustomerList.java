@@ -2,13 +2,9 @@ package org.contourdynamics.cms.manager;
 
 import java.util.Arrays;
 import java.util.List;
-
-import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-
-import org.picketlink.annotations.PicketLink;
 import org.contourdynamics.cms.Entities.BpMain;
 import org.contourdynamics.cms.Entities.StatusCode;
 import org.contourdynamics.cms.Entities.BpTypeCode;
@@ -18,7 +14,6 @@ import org.contourdynamics.cms.models.BpTypeCodeModel;
 
 @Named("CustomerListManager")
 @RequestScoped
-@PicketLink
 public class CDCustomerList {
 	private List<BpMain> Customers;
 	private BpMain selectedCustomer;
@@ -60,7 +55,12 @@ public class CDCustomerList {
 		Customers = model.ReadAll();
 		return Customers;
 	}
-	
+	public void handleClose()
+	{
+//		Customers.clear();
+//		selectedCustomers.clear();
+//		filteredCustomers.clear();
+	}
 	public List<BpMain> getCustomers() {
         return Customers;
     }
