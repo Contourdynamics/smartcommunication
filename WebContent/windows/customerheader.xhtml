@@ -6,7 +6,9 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
       <h:head>
+      <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/default.css" />
       <style>
+     
 .ui-layout-unit {
    	padding: 2px !important;
 }
@@ -39,8 +41,10 @@
 			<p:ribbon>
 				<p:tab title="Customers">
 					<p:ribbonGroup label="Options">
-						<p:commandButton value="New" icon="ui-ribbonicon-new" styleClass="ui-ribbon-bigbutton" type="button"/>
-						<p:commandButton value="Save" icon="ui-ribbonicon-save" styleClass="ui-ribbon-bigbutton" type="button"/>
+						<p:commandButton value="New" icon="ui-ribbonicon-new" style="width:64px" styleClass="ui-ribbon-bigbutton" type="button"/>
+						<p:commandButton value="Save" icon="ui-ribbonicon-save" style="width:64px" styleClass="ui-ribbon-bigbutton" type="button"/>
+						<p:commandButton value="Delete All" icon="ui-ribbonicon-deleteall" style="width:64px" styleClass="ui-ribbon-bigbutton" type="button"/>
+						<p:commandButton value="Delete" icon="ui-ribbonicon-delete" style="width:64px" styleClass="ui-ribbon-bigbutton" type="button"/>
 					</p:ribbonGroup>
 					<p:ribbonGroup label="Clipboard" style="width:150px">
 						<p:selectManyButton>
