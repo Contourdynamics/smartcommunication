@@ -26,6 +26,10 @@ public class BpMainModel {
 	{
 		return Repos.findAll();
 	}
-	
+	public List<BpMain> ReadAllCustomers()
+	{
+		List<BpMain> result = Repos.findAllCustomer(2);
+		return result;
+	}
 	 
 }

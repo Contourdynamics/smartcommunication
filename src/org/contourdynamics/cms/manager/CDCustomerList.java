@@ -52,7 +52,7 @@ public class CDCustomerList {
 		return Arrays.asList(StatusCodeString);
 	}
     public List<BpMain> ReadAllCustomers() {
-		Customers = model.ReadAll();
+		Customers = model.ReadAllCustomers();
 		return Customers;
 	}
 	public void handleClose()
