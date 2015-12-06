@@ -13,12 +13,24 @@
             <h:panelGrid columns="2" cellpadding="10">
              <c:choose>
            		  <c:when test="#{CustomerListManager.selectedCustomers.size()>0}">
-           			 <p:outputLabel for="DescriptionViewEmpty">Description:</p:outputLabel>
-                 	<p:inputText id="DescriptionViewEmpty" readonly="true" value="#{CustomerListManager.selectedCustomers.get(0).description}"/>
+           			 <p:outputLabel for="DescriptionView">Description:</p:outputLabel>
+                 	<p:inputText id="DescriptionView" disabled="true" style="background:#DDD4D4;font-size:small;" readonly="true" value="#{CustomerListManager.selectedCustomers.get(0).description}"/>
+                 	<p:outputLabel for="DomainView">Domain:</p:outputLabel>
+                 	<p:inputText id="DomainView" disabled="true" style="background:#DDD4D4;font-size:small;" readonly="true" value="#{CustomerListManager.selectedCustomers.get(0).bpSysUser.realm.domain}"/>
+                	<p:outputLabel for="TypeView">Type:</p:outputLabel>
+                 	<p:inputText id="TypeView" disabled="true" style="background:#DDD4D4;font-size:small;" readonly="true" value="#{CustomerListManager.selectedCustomers.get(0).bpTypeCode.description}"/>
+               		<p:outputLabel for="StatusView">Status:</p:outputLabel>
+                 	<p:inputText id="StatusView" disabled="true" style="background:#DDD4D4;font-size:small;" readonly="true" value="#{CustomerListManager.selectedCustomers.get(0).statusCode.description}"/>
                	 </c:when>
                	 <c:when test="#{CustomerListManager.selectedCustomers.size()==0}">
-               	 	<p:outputLabel for="DescriptionView">Description:</p:outputLabel>
-               	 	<p:inputText id="DescriptionView" readonly="true" value="Please Select any Customer in list"/>
+               	 	<p:outputLabel for="DescriptionViewEmpty">Description:</p:outputLabel>
+               	 	<p:inputText id="DescriptionViewEmpty" disabled="true" style="background:#DDD4D4;font-size:small;"  readonly="true" value="Please Select any Customer in list"/>
+               	 	<p:outputLabel for="DomainViewEmpty">Domain:</p:outputLabel>
+                   <p:inputText id="DomainViewEmpty" disabled="true" style="background:#DDD4D4;font-size:small;" readonly="true" value="Please Select any Customer in list"/>
+               	<p:outputLabel for="TypeViewEmpty">Type:</p:outputLabel>
+                 	<p:inputText id="TypeViewEmpty" disabled="true" style="background:#DDD4D4;font-size:small;" readonly="true" value="Please Select any Customer in list"/>
+               		<p:outputLabel for="StatusViewEmpty">Status:</p:outputLabel>
+                 	<p:inputText id="StatusViewEmpty" disabled="true" style="background:#DDD4D4;font-size:small;" readonly="true" value="Please Select any Customer in list"/>
                	 </c:when>
              </c:choose>
             </h:panelGrid>
