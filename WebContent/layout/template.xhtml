@@ -18,6 +18,7 @@
    </h:head>
    <h:body>
 <p:layout fullPage="true"  rendered="#{identity.loggedIn}">
+ <ui:include src="../windows/CustomerEdit.xhtml"/>
 		<p:layoutUnit position="center">
 			<div class="body">
         		<ui:insert name="body"/>

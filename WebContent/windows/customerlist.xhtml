@@ -28,6 +28,20 @@
   	 rowsPerPageTemplate="5,10,15" paginatorPosition="bottom"
      selection="#{CustomerListManager.selectedCustomers}" rowKey="#{customer.id}">
      <p:ajax event="rowSelect" update="CustomerViewDialog" />
+     <p:ajax event="rowSelect" update="MPcustomer" />
+     <p:ajax event="rowUnselect" update="CustomerViewDialog" />
+     <p:ajax event="rowUnselect" update="MPcustomer" />
+     
+     <p:ajax event="rowSelectCheckbox" update="CustomerViewDialog" />
+     <p:ajax event="rowSelectCheckbox" update="MPcustomer" />
+     <p:ajax event="rowUnselectCheckbox" update="CustomerViewDialog" />
+     <p:ajax event="rowUnselectCheckbox" update="MPcustomer" />
+     
+     <p:ajax event="toggleSelect" update="CustomerViewDialog" />
+     <p:ajax event="toggleSelect" update="MPcustomer" />
+     <p:ajax event="toggleSelect" update="CustomerViewDialog" />
+     <p:ajax event="toggleSelect" update="MPcustomer" />
+     
         <f:facet name="header">
             <p:outputPanel>
                 <h:outputText value="Search Customers:" />

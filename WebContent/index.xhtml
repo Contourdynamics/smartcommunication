@@ -16,9 +16,12 @@
       </style>
    </h:head>
    <h:body>
+  
     <ui:composition autoupdate="true" template="layout/template.xhtml" rendered="#{identity.loggedIn}">
+    
 		<ui:define id="body" name="body" autoupdate="true">
-        	<ui:include src="/dialogs/customers.xhtml" ajax="true"/>
+        	<ui:include src="/dialogs/customers.xhtml"/>
+        	
 		</ui:define>
 
 		<ui:define id="Login" name="Login" rendered="#{not identity.loggedIn}" autoupdate="true">

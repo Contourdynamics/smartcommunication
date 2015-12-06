@@ -4,15 +4,23 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
 	<h:body>
 		<h:form prependId="false">
     <p:accordionPanel id="CustomerViewDialog" widgetVar="CustomerViewDialog" multiple="true" activeIndex="0">
-       <p:tab title="Customer Details" disabled="true">
+       <p:tab title="Customer Details- Preview" disabled="true">
             <h:panelGrid columns="2" cellpadding="10">
-           		 <p:outputLabel for="Descriptions">Description:</p:outputLabel>
-                 <p:inputText id="Descriptions" readonly="true" value="#{CustomerListManager.selectedCustomers.get(0).description}"/>
-                
+             <c:choose>
+           		  <c:when test="#{CustomerListManager.selectedCustomers.size()>0}">
+           			 <p:outputLabel for="DescriptionViewEmpty">Description:</p:outputLabel>
+                 	<p:inputText id="DescriptionViewEmpty" readonly="true" value="#{CustomerListManager.selectedCustomers.get(0).description}"/>
+               	 </c:when>
+               	 <c:when test="#{CustomerListManager.selectedCustomers.size()==0}">
+               	 	<p:outputLabel for="DescriptionView">Description:</p:outputLabel>
+               	 	<p:inputText id="DescriptionView" readonly="true" value="Please Select any Customer in list"/>
+               	 </c:when>
+             </c:choose>
             </h:panelGrid>
         </p:tab>
         <p:tab title="Godfather Part II">

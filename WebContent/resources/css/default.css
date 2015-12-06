@@ -280,17 +280,17 @@ img.right {
         margin-top: -24px;
         background-image: url("/contourdynamics/resources/images/icon/plus_32.png") !important;
 }
-.ui-icon.ui-ribbonicon-save {
+.ui-icon.ui-ribbonicon-edit {
        margin-left: -14px;
        margin-top: -24px;
-       background-image: url("/contourdynamics/resources/images/icon/save_32.png") !important;
+       background-image: url("/contourdynamics/resources/images/icon/edit_32.png") !important;
 }
-.ui-icon.ui-ribbonicon-delete {
+.ui-icon.ui-ribbonicon-deleteall {
        margin-left: -14px;
        margin-top: -24px;
        background-image: url("/contourdynamics/resources/images/icon/delete_32.png") !important;
 }
-.ui-icon.ui-ribbonicon-deleteall {
+.ui-icon.ui-ribbonicon-delete {
        margin-left: -14px;
        margin-top: -24px;
        background-image: url("/contourdynamics/resources/images/icon/trash_32.png") !important;
