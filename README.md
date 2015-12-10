@@ -1,2 +1,2 @@
-# smart communication
-Smart Communication solution for VoIP Services.
+# Communication Management System (CMS)
+Smart Communication solution for VoIP/IMS Services.
