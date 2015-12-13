@@ -11,3 +11,7 @@ The Project includes:
 
 
 The Communication Management System is a web based administration panel for the designing communication services. the mediaserver developed on sip servlet is providing converged application framework. media server can be configured dynamically via web interface to work as per enterprise requirements.
+
+# Layout of Smart Communication Application:
+
+![](https://github.com/Contourdynamics/smartcommunication/blob/master/Layout/Layout-SmartCommunication.png)
