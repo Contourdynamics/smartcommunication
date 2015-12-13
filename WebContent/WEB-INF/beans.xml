@@ -9,4 +9,6 @@
     <alternatives>
         <class>org.apache.deltaspike.jpa.impl.transaction.BeanManagedUserTransactionStrategy</class>
     </alternatives>
+    
+
  </beans>
