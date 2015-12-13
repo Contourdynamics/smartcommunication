@@ -9,7 +9,7 @@ The Project includes:
 
 3- INVENTORY MANAGEMENT- for Communication oriented Resources
 
-4- SMART BILLING SUB SYSTEM - which includes Prepay and Postpaid billing for services, resources and packages purchased.
+4- SMART BILLING SUB SYSTEM - includes Prepay/Postpaid billing for services, resources and packages purchased.
 
 5- BI REPORTING - Jasper based graphical Reporting system included. pre-designed and custom reporting supported.
 
