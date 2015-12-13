@@ -10,4 +10,4 @@ The Project includes:
 3- Diameter Interfaces
 
 
-This single project includes the full fledge Communication management system with Web based System for controlling and monitoring. 
+The Communication Management System is a web based administration panel for the designing communication services. the mediaserver developed on sip servlet is providing converged application framework. media server can be configured dynamically via web interface to work as per enterprise requirements.
