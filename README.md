@@ -25,7 +25,7 @@ CMS Modules:
 CMS Services
 ============
 INBOUND CAMPAIGNS:
-============
+
 These are basically the inbound based converged applications designed to work for specific functionalities. system provides a set of converged application modules based on which Customers will be able to configure the campaigns. Customers can design provided number of campaigns based on its package for subscriptions. 
 
 Customer will be able to design a Converged system which will include:
@@ -39,7 +39,6 @@ Example of these services can be, Recording based system, which on identifying t
 Application workflows and code will be designed by Admin user via Workflow Engine. 
 
 OUTBOUND CAMPAIGNS:
-============
 
 
 
