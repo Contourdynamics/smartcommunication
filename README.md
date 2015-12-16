@@ -93,18 +93,23 @@ These are end users in the system which will be consuming the services, these us
 This feature of SCS is to provide features to consumers of the system, these will be for end user where users will be consuming the services. the services includes:
 
 4.1 COMMUNICATOR
+
 This will be webrtc based Web and mobile application, which will provide the consumer to handle all converged communication features. Features and design for the communicator will is shared on following URL ....TBD.
 
 4.2 CALLCENTER 
+
 This web based application will be graphicall portal which all agents will be able to manage all communications. its user interface will let the Agent smartly handle all communications. the details about this application will be shared soon on other page. 
 
 4.3 BLF PANEL
+
 The busy lamp field panel is like flash operator panel, it will be used for applications designed in Converged application designer. it will provide extensible features for the consumers activated for the applications. 
 
 4.4 SHOP
+
 This will be purchasing area for the consumers. where they can subscribe for services. and as well here they will be able to view the live statuses for the services they have been subscribed. Design and Details to be shared soon on this topic.
 
 4.5 REPORTING SYSTEM
+
 This system provide a extensive reporting for the consumers to access all service details. reports will be grouped as per all services offered by the SCS.
 
 # Layout of Smart Communication Application:
