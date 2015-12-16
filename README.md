@@ -2,7 +2,7 @@
 
 The smart communication System is a web based management panel.There exist a separate SIP Servlet based application framework engine which lets smart communication system to provide converged platform for desiging configuring and consuming the communication converved services. 
 
-1. CMS FEATURES:
+1. SCS FEATURES:
 ============
 
 1.1- CUSTOMER SUPPORT- includes the Task List, and CallCenter panel Module.
@@ -25,7 +25,7 @@ The smart communication System is a web based management panel.There exist a sep
 
 
 
-2. CMS SERVICES DESIGNERS:
+2. SCS SERVICES DESIGNERS:
 ============
 2.1 CONVERGED APPLICATION EDITOR:
     
@@ -67,7 +67,7 @@ The workflow for the ACD skill based routing and call flow will be designed via 
 
 The Calling Card editor is responsible for handling all outbound dialings by Consumers. Every Consumer will be provided by a Balance and can select the package for dialing. Based on conditions designed by Administrator for dialing out system will perform Authorization and Accounting for all calls. other functionality provided by this service is LCR, which will be selecting the Carrier Vendor for dialing onto destinations, rules for the selection will be designed by Administrator view BPM editor dynamically and applied to overall deployment. 
 
-3. CMS USER ROLES:
+3. SCS USER ROLES:
 ============
 Communication management system has three roles for the users which operates in different business aspects explained as follow:
 
@@ -88,7 +88,7 @@ This user can be termed as Retailer of Communication Management System. SCS will
 3.3 CONSUMERS:
 
 These are end users in the system which will be consuming the services, these users will only have access to portals of the system where they can update there accounts and consume services. These consumers will hold the web based, mobile applications. 
-4. CMS SERVICE CONSUMERS
+4. SCS SERVICE CONSUMERS
 ============
 This feature of SCS is to provide features to consumers of the system, these will be for end user where users will be consuming the services. the services includes:
 
