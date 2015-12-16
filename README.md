@@ -65,14 +65,27 @@ The workflow for the ACD skill based routing and call flow will be designed via 
 
 The Calling Card service is responsible for handling all outbound dialings by Consumers. Every Consumer will be provided by a Balance and can select the package for dialing. Based on conditions designed by Administrator for dialing out system will perform Authorization and Accounting for all calls. other functionality provided by this service is LCR, which will be selecting the Carrier Vendor for dialing onto destinations, rules for the selection will be designed by Administrator view BPM editor dynamically and applied to overall deployment. 
 
-
+3. CMS USER ROLES:
+============
 Communication management system has three roles for the users which operates in different business aspects explained as follow:
 
-1- System Administrator. 
-This user is basically the system designer, which will be working on BPM workflow engine to construct the overall application. the one deployment will work on the provided workflows. 
+3.1 SYSTEM ADMINISTRATOR. 
 
-2- Customers:
-These users will be the enterprises or individual identities which will be configuring the sytsem for their businesses. 0
+This user is basically the system designer, which will be working on BPM workflow engine to construct the overall application. the one deployment will work on the provided workflows. Administrator will be able to manage customers, and design the packages and services which can be sell to Customers. This user has two responsibilities 
+
+    1- Designing the System
+    2- Desiging and Managing Customers
+This user can be termed as Whole Seller of Communication Management System.
+
+3.2 CUSTOMERS:
+
+These users will be the enterprises or individual identities which will be configuring the sytsem for their businesses. These user will not have any access to Workflow or desiging the system. Customers will be able to configure the designed system for different set of services. Customers will be purchasing the services account from administrator and as well can resell them to consumers. Typical example is Customer can be Admin of PBX for all extensions and extensions will be consumers, and other example can be Administrator for configuring the Calling Card service for enabling the dialing out of all consumers. 
+
+This user can be termed as Retailer of Communication Management System. CMS will provide a basic branding for these accounts to be shown for Consumers. 
+
+3.3 CONSUMERS:
+
+These are end users in the system which will be consuming the services, these users will only have access to portals of the system where they can update there accounts and consume services. These consumers will hold the web based, mobile applications. 
 
 # Layout of Smart Communication Application:
 
