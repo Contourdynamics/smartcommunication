@@ -17,7 +17,7 @@ The smart communication System is a web based management panel.There exist a sep
 
 1.6- ADMINISTRATION-  includes the Templating of documents, Workflow and Business Rules Application designing
 
-1.7- SERVICES DESIGNER- Converged Application Editor, CallCenter ACD Configurator, Marketing Designer, Calling Card Editor
+1.7- SERVICES DESIGNER- Converged Application Editor, CallCenter ACD Configurator, Marketing Designer, Calling Card
 
 1.8- SERVICE CONSUMER- Communicator , CallCenter Module, BLF Panel, Shop and Reporting system
 
@@ -65,7 +65,7 @@ The workflow for the ACD skill based routing and call flow will be designed via 
 
 2.4 CALLING CARD EDITOR:
 
-The Calling Card EDITOR is responsible for handling all outbound dialings by Consumers. Every Consumer will be provided by a Balance and can select the package for dialing. Based on conditions designed by Administrator for dialing out system will perform Authorization and Accounting for all calls. other functionality provided by this service is LCR, which will be selecting the Carrier Vendor for dialing onto destinations, rules for the selection will be designed by Administrator view BPM editor dynamically and applied to overall deployment. 
+The Calling Card editor is responsible for handling all outbound dialings by Consumers. Every Consumer will be provided by a Balance and can select the package for dialing. Based on conditions designed by Administrator for dialing out system will perform Authorization and Accounting for all calls. other functionality provided by this service is LCR, which will be selecting the Carrier Vendor for dialing onto destinations, rules for the selection will be designed by Administrator view BPM editor dynamically and applied to overall deployment. 
 
 3. CMS USER ROLES:
 ============
