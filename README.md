@@ -24,7 +24,7 @@ CMS Modules:
 
 CMS Services
 ============
-    CONVERGED APPLICATIONS:
+CONVERGED APPLICATIONS:
     
     These are basically the inbound based converged applications designed to work for specific functionalities. system provides a set of converged modules based on which Customers will be able to configure the Applications. Customers can design provided number of applications based on its package for subscriptions. 
     
@@ -40,17 +40,17 @@ CMS Services
 
 MARKETING SERVICS:
 
-Marketing Services provides the 
-
-1- Outbound Campaigns which includes 
-
-    1- Polling
-
-    2- SMS Marketing
-
-    3- Announcements
-
-    4- Surveys
+    Marketing Services provides the 
+    
+    1- Outbound Campaigns which includes 
+    
+        1- Polling
+    
+        2- SMS Marketing
+    
+        3- Announcements
+    
+        4- Surveys
 
 
 Communication management system has three roles for the users which operates in different business aspects explained as follow:
