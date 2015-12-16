@@ -55,8 +55,15 @@ Marketing Services provides the
 These all Services will be designed in CMS by Customers for the business aspects, and every service workflow will be designed by Administrator of system. 
 
 
-2.3 CALLCENTER ACD SERVICE:
+2.3 CALL-CENTER ACD SERVICE:
 
+This module hold the Call center based ACD Skill based routing engine, which has been designed on Smart queues developed and designed by Administrator for specific business requirements. The customers can design the consumers with skills for provisioning of call handlings by selected consumers. 
+
+The workflow for the ACD skill based routing and call flow will be designed via BPM editor by Administor for the application, and will be applied to all customers. 
+
+2.4 CALLING CARD SERVICE:
+
+The Calling Card service is responsible for handling all outbound dialings by Consumers. Every Consumer will be provided by a Balance and can select the package for dialing. Based on conditions designed by Administrator for dialing out system will perform Authorization and Accounting for all calls. other functionality provided by this service is LCR, which will be selecting the Carrier Vendor for dialing onto destinations, rules for the selection will be designed by Administrator view BPM editor dynamically and applied to overall deployment. 
 
 
 Communication management system has three roles for the users which operates in different business aspects explained as follow:
