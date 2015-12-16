@@ -24,22 +24,33 @@ CMS Modules:
 
 CMS Services
 ============
-INBOUND CAMPAIGNS:
+CONVERGED APPLICATIONS:
 
-These are basically the inbound based converged applications designed to work for specific functionalities. system provides a set of converged application modules based on which Customers will be able to configure the campaigns. Customers can design provided number of campaigns based on its package for subscriptions. 
+These are basically the inbound based converged applications designed to work for specific functionalities. system provides a set of converged modules based on which Customers will be able to configure the Applications. Customers can design provided number of applications based on its package for subscriptions. 
 
 Customer will be able to design a Converged system which will include:
 
-1- Communication Applications
+1- Communication Modules
 
-2- Business Applications
+2- Business Modules
 
-Example of these services can be, Recording based system, which on identifying the CLID of caller can record MEMO for specific user and store that recording against that user can send email on compeletion of any recording. and simple example can be a PBX system desiging an IVR of any company based on Applications provided. 
+Example of these applications can be, Recording based system; which on identifying the CLID of caller can record MEMO for specific user and store that recording against that user can send email on compeletion of any recording. and simple example can be a PBX system desiging an IVR of any company based on Modules provided. 
 
-Application workflows and code will be designed by Admin user via Workflow Engine. 
+Modules workflows and logic will be designed by Admin user via Workflow Engine. 
 
-OUTBOUND CAMPAIGNS:
+MARKETING SERVICS:
 
+Marketing Services provides the 
+
+1- Outbound Campaigns which includes 
+
+    1- Polling
+
+    2- SMS Marketing
+
+    3- Announcements
+
+    4- Surveys
 
 
 Communication management system has three roles for the users which operates in different business aspects explained as follow:
