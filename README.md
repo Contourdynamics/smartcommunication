@@ -2,7 +2,7 @@
 
 The Communication Management System is a web based administration panel for the designing communication services. the mediaserver developed on sip servlet is providing converged application framework. media server can be configured dynamically via web interface to work as per enterprise requirements.
 
-CMS Modules:
+CMS FEATURES:
 ============
 
 1- CUSTOMER SUPPORT- includes the Task List, and CallCenter panel Module.
@@ -22,7 +22,7 @@ CMS Modules:
 8- DIRECTORY-  Module lets you manage internal and external Contacts which can be utilized in communications.
 
 
-CMS Services
+CMS SERVICES:
 ============
 CONVERGED APPLICATIONS:
     
@@ -38,11 +38,11 @@ Example of these applications can be, Recording based system; which on identifyi
 
 Modules workflows and logic will be designed by Admin user via Workflow Engine. 
 
-MARKETING SERVICS:
+MARKETING SERVICES:
 
 Marketing Services provides the 
     
-    1- Outbound Campaigns which includes 
+    1- Outbound Campaigns 
     
         1- Polling
     
@@ -51,6 +51,17 @@ Marketing Services provides the
         3- Announcements
     
         4- Surveys
+
+    2- Packages
+        1- Promotional Packages
+        2- Packages Designers
+        3- Bundle Packages
+        
+These all Services will be designed in CMS by Customers for the business aspects, and every service workflow will be designed by Administrator of system. 
+
+
+CALLCENTER ACD SERVICE:
+
 
 
 Communication management system has three roles for the users which operates in different business aspects explained as follow:
