@@ -2,7 +2,7 @@
 
 The Communication Management System is a web based administration panel for the designing communication services. the mediaserver developed on sip servlet is providing converged application framework. media server can be configured dynamically via web interface to work as per enterprise requirements.
 
-Modules of Communication Management System:
+CMS Modules:
 ============
 
 1- CUSTOMER SUPPORT- includes the Task List, and CallCenter panel Module.
@@ -22,7 +22,7 @@ Modules of Communication Management System:
 8- DIRECTORY-  Module lets you manage internal and external Contacts which can be utilized in communications.
 
 
-Services Offered By Communication Management System
+CMS Services
 ============
 INBOUND CAMPAIGNS:
 ============
