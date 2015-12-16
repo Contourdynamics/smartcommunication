@@ -1,4 +1,4 @@
-# Communication Management System (CMS)
+# Smart Communication System (SCS)
 
 The smart communication System is a web based management panel.There exist a separate SIP Servlet based application framework engine which lets smart communication system to provide converged platform for desiging configuring and consuming the communication converved services. 
 
@@ -17,7 +17,7 @@ The smart communication System is a web based management panel.There exist a sep
 
 1.6- ADMINISTRATION-  includes the Templating of documents, Workflow and Business Rules Application designing
 
-1.7- SERVICES DESIGNER- Converged Application Editor, CallCenter ACD Configurator, Marketing Designer, Calling Card
+1.7- SERVICE DESIGNER- Converged Application Editor, CallCenter ACD Configurator, Marketing Designer, Calling Card
 
 1.8- SERVICE CONSUMER- Communicator , CallCenter Module, BLF Panel, Shop and Reporting system
 
@@ -83,11 +83,29 @@ This user can be termed as Whole Seller of Communication Management System.
 
 These users will be the enterprises or individual identities which will be configuring the sytsem for their businesses. These user will not have any access to Workflow or desiging the system. Customers will be able to configure the designed system for different set of services. Customers will be purchasing the services account from administrator and as well can resell them to consumers. Typical example is Customer can be Admin of PBX for all extensions and extensions will be consumers, and other example can be Administrator for configuring the Calling Card service for enabling the dialing out of all consumers. 
 
-This user can be termed as Retailer of Communication Management System. CMS will provide a basic branding for these accounts to be shown for Consumers. 
+This user can be termed as Retailer of Communication Management System. SCS will provide a basic branding for these accounts to be shown for Consumers. 
 
 3.3 CONSUMERS:
 
 These are end users in the system which will be consuming the services, these users will only have access to portals of the system where they can update there accounts and consume services. These consumers will hold the web based, mobile applications. 
+4. CMS SERVICE CONSUMERS
+============
+This feature of SCS is to provide features to consumers of the system, these will be for end user where users will be consuming the services. the services includes:
+
+4.1 COMMUNICATOR
+This will be webrtc based Web and mobile application, which will provide the consumer to handle all converged communication features. Features and design for the communicator will is shared on following URL ....TBD.
+
+4.2 CALLCENTER 
+This web based application will be graphicall portal which all agents will be able to manage all communications. its user interface will let the Agent smartly handle all communications. the details about this application will be shared soon on other page. 
+
+4.3 BLF PANEL
+The busy lamp field panel is like flash operator panel, it will be used for applications designed in Converged application designer. it will provide extensible features for the consumers activated for the applications. 
+
+4.4 SHOP
+This will be purchasing area for the consumers. where they can subscribe for services. and as well here they will be able to view the live statuses for the services they have been subscribed. Design and Details to be shared soon on this topic.
+
+4.5 REPORTING SYSTEM
+This system provide a extensive reporting for the consumers to access all service details. reports will be grouped as per all services offered by the SCS.
 
 # Layout of Smart Communication Application:
 
