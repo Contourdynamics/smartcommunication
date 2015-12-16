@@ -6,13 +6,21 @@ CMS FEATURES:
 ============
 
 1- CUSTOMER SUPPORT- includes the Task List, and CallCenter panel Module.
-2- SALES MANAGEMENT-  includes Orders, Contracts management and promotional Campaigns for increasing revenue.
+
+2- SALES MANAGEMENT-  includes Orders, Contracts management and promotional Campaigns for increasing revenue
+
 3- INVENTORY MANAGEMENT- for Communication oriented Resources
+
 4- SMART BILLING SUB SYSTEM - includes Prepay/Postpaid billing for services, resources and packages purchased.
+
 5- BI REPORTING - Jasper based graphical Reporting system included. pre-designed and custom reporting supported.
+
 6- ADMINISTRATION-  includes the Templating of documents, Workflow and Business Rules Application designing
+
 7- SERVICS PORTALS- includes PBX, CallCenter, Campaigns, BLF panel, Communicator and EFax
+
 8- DIRECTORY-  Module lets you manage internal and external Contacts which can be utilized in communications.
+
 
 
 CMS SERVICES:
