@@ -1,6 +1,6 @@
 # Communication Management System (CMS)
 
-The Communication Management System is a web based administration panel for the designing communication services. the mediaserver developed on sip servlet is providing converged application framework. media server can be configured dynamically via web interface to work as per enterprise requirements.
+The smart communication System is a web based management panel.There exist a separate SIP Servlet based application framework engine which lets smart communication system to provide converged platform for desiging configuring and consuming the communication converved services. 
 
 1. CMS FEATURES:
 ============
@@ -17,15 +17,17 @@ The Communication Management System is a web based administration panel for the 
 
 1.6- ADMINISTRATION-  includes the Templating of documents, Workflow and Business Rules Application designing
 
-1.7- SERVICS PORTALS- includes PBX, CallCenter, Campaigns, BLF panel, Communicator and EFax
+1.7- SERVICES DESIGNER- Converged Application Editor, CallCenter ACD Configurator, Marketing Designer, Calling Card Editor
 
-1.8- DIRECTORY-  Module lets you manage internal and external Contacts which can be utilized in communications.
+1.8- SERVICE CONSUMER- Communicator , CallCenter Module, BLF Panel, Shop and Reporting system
+
+1.9- DIRECTORY-  Module lets you manage internal and external Contacts which can be utilized in communications.
 
 
 
-2. CMS SERVICES:
+2. CMS SERVICES DESIGNERS:
 ============
-2.1 CONVERGED APPLICATIONS:
+2.1 CONVERGED APPLICATION EDITOR:
     
 These are basically the inbound based converged applications designed to work for specific functionalities. system provides a set of converged modules based on which Customers will be able to configure the Applications. Customers can design provided number of applications based on its package for subscriptions. 
 
@@ -38,32 +40,32 @@ Example of these applications can be, Recording based system; which on identifyi
 
 Modules workflows and logic will be designed by Admin user via Workflow Engine. 
 
-2.2 MARKETING SERVICES:
+2.2 MARKETING DESIGNER:
 
-Marketing Services provides the 
+Marketing Designer provides the 
     
-    1- Outbound Campaigns 
+    1- Outbound Campaigns Designer
         1- Polling
         2- SMS Marketing
         3- Announcements
         4- Surveys
-    2- Packages
+    2- Packages Designer
         1- Promotional Packages
-        2- Packages Designers
+        2- Simple Packages
         3- Bundle Packages
         
 These all Services will be designed in CMS by Customers for the business aspects, and every service workflow will be designed by Administrator of system. 
 
 
-2.3 CALL-CENTER ACD SERVICE:
+2.3 CALL-CENTER ACD CONFIGURATOR:
 
 This module hold the Call center based ACD Skill based routing engine, which has been designed on Smart queues developed and designed by Administrator for specific business requirements. The customers can design the consumers with skills for provisioning of call handlings by selected consumers. 
 
 The workflow for the ACD skill based routing and call flow will be designed via BPM editor by Administor for the application, and will be applied to all customers. 
 
-2.4 CALLING CARD SERVICE:
+2.4 CALLING CARD EDITOR:
 
-The Calling Card service is responsible for handling all outbound dialings by Consumers. Every Consumer will be provided by a Balance and can select the package for dialing. Based on conditions designed by Administrator for dialing out system will perform Authorization and Accounting for all calls. other functionality provided by this service is LCR, which will be selecting the Carrier Vendor for dialing onto destinations, rules for the selection will be designed by Administrator view BPM editor dynamically and applied to overall deployment. 
+The Calling Card EDITOR is responsible for handling all outbound dialings by Consumers. Every Consumer will be provided by a Balance and can select the package for dialing. Based on conditions designed by Administrator for dialing out system will perform Authorization and Accounting for all calls. other functionality provided by this service is LCR, which will be selecting the Carrier Vendor for dialing onto destinations, rules for the selection will be designed by Administrator view BPM editor dynamically and applied to overall deployment. 
 
 3. CMS USER ROLES:
 ============
