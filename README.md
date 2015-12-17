@@ -17,7 +17,12 @@ The smart communication System is a web based management panel.There exist a sep
 
 1.6- ADMINISTRATION-  includes the Templating of documents, Workflow and Business Rules Application designing
 
-1.7- APPLICATION DESIGNER- Custom Converged Application, Pre-Designed Converged Application(CallCenter, Marketing, Calling Card)
+1.7- APPLICATION DESIGNER- 
+    1.7.1 Custom Converged Application, 
+    1.7.2 Pre-Designed Converged Application
+        1.7.2.1 CallCenter
+        1.7.2.2 Marketing
+        1.7.2.3 Calling Card
 
 1.8- SERVICE CONSUMER- Communicator , CallCenter Module, BLF Panel, Shop and Reporting system
 
