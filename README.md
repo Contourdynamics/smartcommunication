@@ -17,7 +17,7 @@ The smart communication System is a web based management panel.There exist a sep
 
 1.6- ADMINISTRATION-  includes the Templating of documents, Workflow and Business Rules Application designing
 
-1.7- SERVICE DESIGNER- Converged Application Designer, CallCenter ACD Editor, Marketing Editor, Calling Card
+1.7- APPLICATION DESIGNER- Custom Converged Application, Pre-Designed Converged Application(CallCenter, Marketing, Calling Card)
 
 1.8- SERVICE CONSUMER- Communicator , CallCenter Module, BLF Panel, Shop and Reporting system
 
@@ -27,9 +27,9 @@ The smart communication System is a web based management panel.There exist a sep
 
 2. SCS SERVICES DESIGNERS:
 ============
-2.1 CONVERGED APPLICATION DESIGNER:
+2.1 CUSTOM CONVERGED APPLICATION DESIGNER:
     
-These are basically the inbound based converged applications designed to work for specific functionalities. system provides a set of converged modules based on which Customers will be able to configure the Applications. Customers can design provided number of applications based on its package for subscriptions. 
+Converged Application Designer is a platform to design the converged applications. The system already provide few pre-designed Applications as listed below. for designing system provides a set of converged modules based on which Customers will be able to Design the Applications. Customers can design provided number of applications based on its package for subscriptions. 
 
 Customer will be able to design a Converged system which will include:
 
@@ -40,7 +40,9 @@ Example of these applications can be, Recording based system; which on identifyi
 
 Modules workflows and logic will be designed by Admin user via Workflow Engine. 
 
-2.2 MARKETING EDITOR:
+2.2 PRE-DESIGNED APPLICATION EDITOR:
+
+2.2.1 MARKETING EDITOR:
 
 Marketing Designer provides the 
     
@@ -57,13 +59,13 @@ Marketing Designer provides the
 These all Services will be designed in CMS by Customers for the business aspects, and every service workflow will be designed by Administrator of system. 
 
 
-2.3 CALL-CENTER ACD EDITOR:
+2.2.2 CALL-CENTER ACD EDITOR:
 
 This module hold the Call center based ACD Skill based routing engine, which has been designed on Smart queues developed and designed by Administrator for specific business requirements. The customers can design the consumers with skills for provisioning of call handlings by selected consumers. 
 
 The workflow for the ACD skill based routing and call flow will be designed via BPM editor by Administor for the application, and will be applied to all customers. 
 
-2.4 CALLING CARD EDITOR:
+2.2.3 CALLING CARD EDITOR:
 
 The Calling Card editor is responsible for handling all outbound dialings by Consumers. Every Consumer will be provided by a Balance and can select the package for dialing. Based on conditions designed by Administrator for dialing out system will perform Authorization and Accounting for all calls. other functionality provided by this service is LCR, which will be selecting the Carrier Vendor for dialing onto destinations, rules for the selection will be designed by Administrator view BPM editor dynamically and applied to overall deployment. 
 
