@@ -17,7 +17,7 @@ The smart communication System is a web based management panel.There exist a sep
 
 1.6- ADMINISTRATION-  includes the Templating of documents, Workflow and Business Rules Application designing
 
-1.7- SERVICE DESIGNER- Converged Application Editor, CallCenter ACD Configurator, Marketing Designer, Calling Card
+1.7- SERVICE DESIGNER- Converged Application Designer, CallCenter ACD Editor, Marketing Editor, Calling Card
 
 1.8- SERVICE CONSUMER- Communicator , CallCenter Module, BLF Panel, Shop and Reporting system
 
@@ -27,7 +27,7 @@ The smart communication System is a web based management panel.There exist a sep
 
 2. SCS SERVICES DESIGNERS:
 ============
-2.1 CONVERGED APPLICATION EDITOR:
+2.1 CONVERGED APPLICATION DESIGNER:
     
 These are basically the inbound based converged applications designed to work for specific functionalities. system provides a set of converged modules based on which Customers will be able to configure the Applications. Customers can design provided number of applications based on its package for subscriptions. 
 
@@ -40,7 +40,7 @@ Example of these applications can be, Recording based system; which on identifyi
 
 Modules workflows and logic will be designed by Admin user via Workflow Engine. 
 
-2.2 MARKETING DESIGNER:
+2.2 MARKETING EDITOR:
 
 Marketing Designer provides the 
     
@@ -57,7 +57,7 @@ Marketing Designer provides the
 These all Services will be designed in CMS by Customers for the business aspects, and every service workflow will be designed by Administrator of system. 
 
 
-2.3 CALL-CENTER ACD CONFIGURATOR:
+2.3 CALL-CENTER ACD EDITOR:
 
 This module hold the Call center based ACD Skill based routing engine, which has been designed on Smart queues developed and designed by Administrator for specific business requirements. The customers can design the consumers with skills for provisioning of call handlings by selected consumers. 
 
