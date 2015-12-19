@@ -49,7 +49,7 @@ public class CDidentityManager extends BaseAuthenticator{
 	{
 		return realm;
 	}
-	private void setrealm(String thisrealm)
+	public void setrealm(String thisrealm)
 	{
 		realm = thisrealm;
 	}
