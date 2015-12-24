@@ -278,69 +278,69 @@ img.right {
 .ui-icon.ui-ribbonicon-new {
        margin-left: -14px;
         margin-top: -24px;
-        background-image: url("/contourdynamics/resources/images/icon/plus_32.png") !important;
+        background-image: url("../images/icon/plus_32.png") !important;
 }
 .ui-icon.ui-ribbonicon-edit {
        margin-left: -14px;
        margin-top: -24px;
-       background-image: url("/contourdynamics/resources/images/icon/edit_32.png") !important;
+       background-image: url("../images/icon/edit_32.png") !important;
 }
 .ui-icon.ui-ribbonicon-deleteall {
        margin-left: -14px;
        margin-top: -24px;
-       background-image: url("/contourdynamics/resources/images/icon/delete_32.png") !important;
+       background-image: url("../images/icon/delete_32.png") !important;
 }
 .ui-icon.ui-ribbonicon-delete {
        margin-left: -14px;
        margin-top: -24px;
-       background-image: url("/contourdynamics/resources/images/icon/trash_32.png") !important;
+       background-image: url("../images/icon/trash_32.png") !important;
 }
 .ui-icon.ui-ribbonicon-Contract {
        margin-left: -15px;
        margin-top: -25px;
-       background-image: url("/contourdynamics/resources/images/icon/Contract.png");
+       background-image: url("../images/icon/Contract.png");
 }
 .ui-icon.ui-ribbonicon-individuals {
        margin-left: -15px;
         margin-top: -25px;
-        background-image: url("/contourdynamics/resources/images/icon/individual.png");
+        background-image: url("../images/icon/individual.png");
 }
 .ui-icon.ui-ribbonicon-company {
        margin-left: -15px;
         margin-top: -25px;
-        background-image: url("/contourdynamics/resources/images/icon/help_32.png");
+        background-image: url("../images/icon/help_32.png");
 }
 .ui-icon.ui-ribbonicon-relationship {
        margin-left: -15px;
         margin-top: -25px;
-        background-image: url("/contourdynamics/resources/images/icon/relationship.png");
+        background-image: url("../images/icon/relationship.png");
 }
 .ui-icon.ui-ribbonicon-packages {
        margin-left: -15px;
        margin-top: -25px;
-       background-image: url("/contourdynamics/resources/images/icon/Packages.png");
+       background-image: url("../images/icon/Packages.png");
 }
 .ui-icon.ui-ribbonicon-region {
        background-image: url("../images/icon/region.png");
 }
 .ui-icon.ui-ribbonicon-ratechart {
-       background-image: url("/contourdynamics/resources/images/icon/ratechart.png");
+       background-image: url("../images/icon/ratechart.png");
 }
 .ui-icon.ui-ribbonicon-Timechart {
-       background-image: url("/contourdynamics/resources/images/icon/timechart.png");
+       background-image: url("../images/icon/timechart.png");
 }
 .ui-icon.ui-ribbonicon-Campaign {
        margin-left: -15px;
        margin-top: -25px;
-       background-image: url("/contourdynamics/resources/images/icon/Campaign.png");
+       background-image: url("../images/icon/Campaign.png");
 }
 .ui-icon.ui-ribbonicon-Asset {
-       background-image: url("/contourdynamics/resources/images/icon/Asset.png");
+       background-image: url("../images/icon/Asset.png");
 }
 .ui-icon.ui-ribbonicon-workqueue {
        margin-left: -15px;
        margin-top: -25px;
-       background-image: url("/contourdynamics/resources/images/icon/workqueue.png");
+       background-image: url("../images/icon/workqueue.png");
 }
 .ui-icon.ui-ribbonicon-shifts {
        margin-left: -15px;
