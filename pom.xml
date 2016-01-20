@@ -186,125 +186,194 @@
 			<version>2.2.1</version>
 		</dependency>
         
-        <!--  JBPM  -->
-
-<dependency>
-<groupId>org.jbpm</groupId>
-<artifactId>jbpm-flow</artifactId>
-<version>6.3.0.Final</version>
+        <!--  JBPM 
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-services-api</artifactId>
+			<version>6.3.0.Final</version>
+		</dependency>
+		<dependency>
+      		<groupId>org.jbpm</groupId>
+      		<artifactId>jbpm-services-cdi</artifactId>
+      		<version>6.3.0.Final</version>
+    	</dependency>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-flow</artifactId>
+			<version>6.3.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-bpmn2</artifactId>
+			<version>6.3.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-flow-builder</artifactId>
+			<version>6.3.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-runtime-manager</artifactId>
+			<version>6.3.0.Final</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>weld-spi</artifactId>
+					<groupId>org.jboss.weld</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>weld-api</artifactId>
+					<groupId>org.jboss.weld</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>weld-core</artifactId>
+					<groupId>org.jboss.weld</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jackson-core-asl</artifactId>
+					<groupId>org.codehaus.jackson</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-persistence-jpa</artifactId>
+			<version>6.3.0.Final</version>
+		</dependency>
+		<dependency>
+        		<groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>1.6.1</version>
+                <scope>provided</scope>
+        </dependency> 
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-human-task-core</artifactId>
+			<version>6.3.0.Final</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>activation</artifactId>
+					<groupId>javax.activation</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>mail</artifactId>
+					<groupId>javax.mail</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jta</artifactId>
+					<groupId>javax.transaction</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>javax.inject</artifactId>
+					<groupId>javax.inject</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-human-task-jpa</artifactId>
+			<version>6.3.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cdi</artifactId>
+			<version>2.15.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>jaxb-impl</artifactId>
+					<groupId>com.sun.xml.bind</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>deltaspike-cdictrl-api</artifactId>
+					<groupId>org.apache.deltaspike.cdictrl</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>deltaspike-core-api</artifactId>
+					<groupId>org.apache.deltaspike.core</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>deltaspike-core-impl</artifactId>
+					<groupId>org.apache.deltaspike.core</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-api</artifactId>
+			<version>6.3.0.Final</version>
+		</dependency>
+		-->
+		
+		    <!-- jBPM 6 dependencies -->
+		    <dependency>
+        		<groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>1.6.1</version>
+                <scope>provided</scope>
+        </dependency> 
+		    		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-persistence-jpa</artifactId>
+			<version>6.3.0.Final</version>
+		</dependency>
+		    <dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-human-task-jpa</artifactId>
+			<version>6.3.0.Final</version>
+		</dependency>
+    <dependency>
+      <groupId>org.kie</groupId>
+      <artifactId>kie-api</artifactId>
+      <version>6.3.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-human-task-core</artifactId>
+      <version>6.3.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-kie-services</artifactId>
+      <version>6.3.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-services-api</artifactId>
+      <version>6.3.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-services-cdi</artifactId>
+      <version>6.3.0.Final</version>
+    </dependency>
+ <!--    <dependency>
+	<groupId>org.jbpm</groupId>
+		<artifactId>jbpm-workitems</artifactId>
+		<version>6.3.0.Final</version>
+	</dependency>
+     -->
+		<dependency>
+<groupId>com.google.guava</groupId>
+<artifactId>guava</artifactId>
+<version>10.0.1</version>
 </dependency>
-<dependency>
-<groupId>org.jbpm</groupId>
-<artifactId>jbpm-bpmn2</artifactId>
-<version>6.3.0.Final</version>
-</dependency>
-<dependency>
-<groupId>org.jbpm</groupId>
-<artifactId>jbpm-flow-builder</artifactId>
-<version>6.3.0.Final</version>
-</dependency>
-<dependency>
-<groupId>org.jbpm</groupId>
-<artifactId>jbpm-runtime-manager</artifactId>
-<version>6.3.0.Final</version>
-<exclusions>
-<exclusion>
-<artifactId>weld-spi</artifactId>
-<groupId>org.jboss.weld</groupId>
-</exclusion>
-<exclusion>
-<artifactId>weld-api</artifactId>
-<groupId>org.jboss.weld</groupId>
-</exclusion>
-<exclusion>
-<artifactId>weld-core</artifactId>
-<groupId>org.jboss.weld</groupId>
-</exclusion>
-<exclusion>
-<artifactId>jackson-core-asl</artifactId>
-<groupId>org.codehaus.jackson</groupId>
-</exclusion>
-</exclusions>
-</dependency>
-
-
-
-	<dependency>
-<groupId>org.jbpm</groupId>
-<artifactId>jbpm-persistence-jpa</artifactId>
-<version>6.3.0.Final</version>
-</dependency>
-
-<dependency>
-<groupId>org.jbpm</groupId>
-<artifactId>jbpm-human-task-core</artifactId>
-<version>6.3.0.Final</version>
-<exclusions>
-<exclusion>
-<artifactId>activation</artifactId>
-<groupId>javax.activation</groupId>
-</exclusion>
-<exclusion>
-<artifactId>mail</artifactId>
-<groupId>javax.mail</groupId>
-</exclusion>
-<exclusion>
-<artifactId>jta</artifactId>
-<groupId>javax.transaction</groupId>
-</exclusion>
-<exclusion>
-<artifactId>javax.inject</artifactId>
-<groupId>javax.inject</groupId>
-</exclusion>
-</exclusions>
-</dependency>
-
-<dependency>
-<groupId>org.apache.camel</groupId>
-<artifactId>camel-cdi</artifactId>
-<version>2.15.0</version>
-<exclusions>
-<exclusion>
-<artifactId>jaxb-impl</artifactId>
-<groupId>com.sun.xml.bind</groupId>
-</exclusion>
-<exclusion>
-<artifactId>deltaspike-cdictrl-api</artifactId>
-<groupId>org.apache.deltaspike.cdictrl</groupId>
-</exclusion>
-<exclusion>
-<artifactId>deltaspike-core-api</artifactId>
-<groupId>org.apache.deltaspike.core</groupId>
-</exclusion>
-<exclusion>
-<artifactId>deltaspike-core-impl</artifactId>
-<groupId>org.apache.deltaspike.core</groupId>
-</exclusion>
-</exclusions>
-</dependency>
-
-<dependency>
-<groupId>org.kie</groupId>
-<artifactId>kie-api</artifactId>
-<version>6.3.0.Final</version>
-</dependency>
-
-<dependency>
-<groupId>com.google.protobuf</groupId>
-<artifactId>protobuf-java</artifactId>
-<version>2.5.0</version>
-</dependency>
-<dependency>
-<groupId>org.kie</groupId>
-<artifactId>kie-ci</artifactId>
-<version>6.3.0.Final</version>
-<exclusions>
-<exclusion>
-<artifactId>javax.inject</artifactId>
-<groupId>javax.inject</groupId>
-</exclusion>
-</exclusions>
-</dependency>
+<!-- 		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-ci</artifactId>
+			<version>6.3.0.Final</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>javax.inject</artifactId>
+					<groupId>javax.inject</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+   -->
   </dependencies>
   <!-- repositories -->
 	<repositories>
@@ -342,5 +411,15 @@
 				<updatePolicy>never</updatePolicy>
 			</snapshots>
 		</repository>
-	</repositories>
+		
+		   <repository>
+    <id>jbpms</id>
+    <name>local BPM</name>
+    <layout>default</layout>
+    <url>http://192.168.0.106:8080/jbpm-console/maven2wb/</url>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository> 
+  	</repositories>
 </project>

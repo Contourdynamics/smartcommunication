@@ -42,7 +42,7 @@
 				<p:tab title="Actions">
 					<p:ribbonGroup label="Options">
 						<p:commandButton value="New" onclick="PF('MPcustomer').hide();PF('MPcustomer').show();" icon="ui-ribbonicon-new" style="width:64px" styleClass="ui-ribbon-bigbutton" type="button"/>
-						<p:commandButton value="Edit" icon="ui-ribbonicon-edit" style="width:64px" styleClass="ui-ribbon-bigbutton" type="button"/>
+						<p:commandButton value="Edit" id="edit" actionListener="#{CustomerListManager.CDStartProcess}" icon="ui-ribbonicon-edit" style="width:64px" styleClass="ui-ribbon-bigbutton"/>
 						<p:commandButton value="Delete" icon="ui-ribbonicon-delete" style="width:64px" styleClass="ui-ribbon-bigbutton" type="button"/>
 						<p:commandButton value="Delete All" icon="ui-ribbonicon-deleteall" style="width:64px" styleClass="ui-ribbon-bigbutton" type="button"/>
 					</p:ribbonGroup>

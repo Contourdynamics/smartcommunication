@@ -1,17 +1,30 @@
 package org.contourdynamics.cms.manager;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+
+import org.apache.deltaspike.jpa.api.transaction.Transactional;
 import org.contourdynamics.cms.Entities.BpMain;
 import org.contourdynamics.cms.Entities.StatusCode;
 import org.contourdynamics.cms.Entities.BpTypeCode;
 import org.contourdynamics.cms.models.BpMainModel;
+import org.contourdynamics.cms.models.CDProcessController;
 import org.contourdynamics.cms.models.StatusCodeModel;
 import org.contourdynamics.cms.models.BpTypeCodeModel;
-
+import org.jbpm.services.api.DeploymentService;
+import org.jbpm.services.api.ProcessService;
+import org.kie.api.runtime.KieSession;
+import org.kie.api.runtime.manager.RuntimeEngine;
+import org.kie.api.runtime.manager.RuntimeManager;
+import org.kie.internal.runtime.manager.cdi.qualifier.PerProcessInstance;
+import org.kie.internal.runtime.manager.context.ProcessInstanceIdContext;
+import org.kie.api.runtime.process.ProcessInstance;
 @Named("CustomerListManager")
 @RequestScoped
 public class CDCustomerList {
@@ -28,7 +41,18 @@ public class CDCustomerList {
 	
 	@Inject
 	BpTypeCodeModel BModel;
+
+	@Inject
+	CDProcessController ProcessController;
 	
+	public String CDStartProcess()
+	{
+		try {
+            String processInstanceId = ProcessController.startProcess();
+        } catch (Exception e) {
+        }   
+		return "";
+	}
 	public List<String> getTypeCode()
 	{
 		String[] TypeCodeString;
@@ -52,14 +76,11 @@ public class CDCustomerList {
 		return Arrays.asList(StatusCodeString);
 	}
     public List<BpMain> ReadAllCustomers() {
-		Customers = model.ReadAllCustomers();
+ 		Customers = model.ReadAllCustomers();
 		return Customers;
 	}
 	public void handleClose()
 	{
-//		Customers.clear();
-//		selectedCustomers.clear();
-//		filteredCustomers.clear();
 	}
 	public List<BpMain> getCustomers() {
         return Customers;
