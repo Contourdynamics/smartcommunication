@@ -33,8 +33,10 @@ The smart communication System is a web based management panel.There exist a sep
 
 1.9- DIRECTORY-  Module lets you manage internal and external Contacts which can be utilized in communications.
 
-1.10- Enterprise Mobility Management
-1.11- Mobile Application Management
+1.10- ENTERPRISE MOBILITY MANAGEMENT 
+
+1.11- MOBILE APPLICATION MANAGEMENT
+
 
 2. SCS SERVICES DESIGNERS:
 ============
