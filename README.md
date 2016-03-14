@@ -37,6 +37,8 @@ The smart communication System is a web based management panel.There exist a sep
 
 1.11- MOBILE APPLICATION MANAGEMENT
 
+1.12- MOBILE INFORMATION MANAGEMENT
+
 
 2. SCS SERVICES DESIGNERS:
 ============
